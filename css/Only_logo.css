@@ -1,0 +1,67 @@
+/* Kwikpay logo motion styles */
+.kp-logo-stage {
+	position: relative;
+	width: 100%;
+	max-width: 420px;
+	margin-inline: auto;
+	aspect-ratio: 1/1;
+	background: radial-gradient(120px 120px at 50% 60%, rgba(9,128,255,0.14), rgba(9,128,255,0) 35%),
+		linear-gradient(180deg, #ffffff, #fbfcfe);
+	border: 1px solid rgba(0,0,0,0.06);
+	border-radius: 20px;
+	box-shadow: 0 8px 26px rgba(2,32,71,0.06);
+}
+
+.kp-logo-orbit {
+	position: absolute;
+	inset: 10% 10% 10% 10%;
+	border-radius: 50%;
+	border: 2px dashed rgba(9,128,255,0.2);
+	animation: kp-orbit 8s linear infinite;
+}
+
+.kp-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	filter: drop-shadow(0 8px 18px rgba(3,85,173,0.25));
+	animation: kp-float 4.5s ease-in-out infinite;
+}
+
+.kp-logo-sheen {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background: linear-gradient(120deg, rgba(255,255,255,0) 42%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 58%);
+	transform: skewX(-18deg) translateX(-120%);
+	border-radius: 20px;
+	animation: kp-sheen 5.5s ease-in-out infinite 0.8s;
+}
+
+/* Replay helper */
+.kp-replay .kp-logo { animation: none; }
+.kp-replay .kp-logo-sheen { animation: none; }
+.kp-replay .kp-logo-orbit { animation: none; }
+
+@keyframes kp-float {
+	0%, 100% { transform: translate(-50%, calc(-50% - 2px)); }
+	50% { transform: translate(-50%, calc(-50% - 10px)); }
+}
+
+@keyframes kp-orbit {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+@keyframes kp-sheen {
+	0% { transform: skewX(-18deg) translateX(-120%); opacity: 0; }
+	10% { opacity: 1; }
+	35% { transform: skewX(-18deg) translateX(120%); opacity: 0; }
+	100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.kp-logo, .kp-logo-orbit, .kp-logo-sheen { animation: none !important; }
+}
+
