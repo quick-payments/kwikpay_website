@@ -1,213 +1,976 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KwikPay - Coming Soon</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #0980FF;
-            --accent-color: #0355AD;
-            --dark-color: #003366;
-        }
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Kwik Pay – Kuwait's modern digital e‑wallet. Pay, transfer, and manage money securely and instantly.">
+    <title>Home - Kwik Pay</title>
 
-        body {
-            background-color: #fff;
-            color: #1a1a1a;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .nav-container {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo-svg {
-            height: 32px;
-            width: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .logo-svg:hover {
-            transform: scale(1.1);
-        }
-
-        .coming-soon-section {
-            padding-top: 100px;
-            min-height: calc(100vh - 200px);
-            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .coming-soon-content {
-            text-align: center;
-            max-width: 800px;
-            padding: 2rem;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .countdown-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            min-width: 100px;
-        }
-
-        .countdown-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .countdown-label {
-            color: #666;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .notify-form {
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-            gap: 1rem;
-        }
-
-        .notify-input {
-            flex: 1;
-            padding: 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 50px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .notify-input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        .floating-logo {
-            animation: float 3s ease-in-out infinite;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="fixed w-full nav-container z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="index.html" class="logo-container">
-                    <img src="assets/images/logo1.svg" alt="KwikPay Logo" class="logo-svg">
-                </a>    
-            </div>
+    <!-- Bootstrap 5.3.7 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/Only_logo.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="assets/Only_logo.svg">
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loading-logo">
+        <img src="assets/Only_logo.svg" alt="Kwikpay Loading" />
+      </div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-2">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#hero">
+          <img src="assets/logo_with_name.svg" alt="Kwikpay" height="28" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="templates/about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="templates/pay_by_car.html">Pay by Car</a></li>
+            <li class="nav-item"><a class="nav-link" href="templates/contact.html">Contact Us</a></li>
+            <li class="nav-item ms-lg-3"><a class="btn btn-primary px-3" href="#download">Get the app</a></li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <!-- Coming Soon Section -->
-    <section class="coming-soon-section">
-        <div class="coming-soon-content">
-            <img src="assets/images/logo.svg" alt="KwikPay Logo" class="w-32 h-32 mx-auto mb-8 floating-logo">
-            <h1 class="text-5xl font-bold mb-6">
-                Scan, Pay, Done – <span class="gradient-text">The Future of Payments</span> is Almost Here
-            </h1>
-            <p class="text-xl text-gray-600 mb-12">
-                Stay tuned for our launch!
-            </p>
-            
-            <div class="countdown" style="display: none;">
-                <div class="countdown-item">
-                    <div class="countdown-number" id="days">00</div>
-                    <div class="countdown-label">Days</div>
+    <!-- Hero Gallery -->
+    <section id="hero" class="position-relative overflow-hidden">
+      <div class="hero-bg" id="lottie-background"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center min-vh-100 py-6">
+          <div class="col-12 col-lg-5 text-center text-lg-start">
+            <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold px-3 py-2">Kuwait's modern e‑wallet</span>
+            <h1 class="display-5 fw-bold mt-3 mb-3">Scan, Pay, Done</h1>
+            <p class="lead text-body-secondary mb-4">Kwik Pay makes everyday payments simple and secure—from instant transfers to QR payments and bill settlements.</p>
+            <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
+              <a href="#download" class="btn btn-primary btn-lg px-4">
+                <i class="bi bi-phone me-2"></i>Get the app
+              </a>
+              <a href="#features" class="btn btn-outline-primary btn-lg px-4">
+                Learn more
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-7">
+            <div class="hero-gallery">
+              <!-- Professional Animation Showcase -->
+              <div class="hero-showcase-container" id="hero-showcase-container">
+                <!-- Primary Animation Display -->
+                <div class="hero-animation-display" id="hero-animation-display">
+                  <div class="lottie-animation-wrapper" id="lottie-hero-animation"></div>
+                  <div class="hero-overlay-content" id="hero-overlay-content">
+                    <div class="overlay-text">
+                      <h2 class="display-6 fw-bold text-white mb-3">Kwik Pay Digital Wallet</h2>
+                      <p class="lead text-white-50 mb-4">Experience seamless payments with Kwik Pay</p>
+                      <div class="overlay-features">
+                        <div class="feature-badge">
+                          <i class="bi bi-shield-check"></i>
+                          <span>Encryption & Security</span>
+                        </div>
+                        <div class="feature-badge">
+                          <i class="bi bi-lightning-charge"></i>
+                          <span>Instant Transfers</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="hours">00</div>
-                    <div class="countdown-label">Hours</div>
+                
+                <!-- Feature Grid -->
+                <div class="hero-feature-grid" id="hero-feature-grid">
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="bi bi-phone-fill"></i>
+                    </div>
+                    <div class="feature-content">
+                      <h5>Mobile Payments</h5>
+                      <p>Send money instantly with just a phone number</p>
+                    </div>
+                  </div>
+                  
+                  <div class="feature-card">
+                    <div class="feature-icon">
+                      <i class="bi bi-qr-code-scan"></i>
+                    </div>
+                    <div class="feature-content">
+                      <h5>QR Payments</h5>
+                      <p>Scan and pay quickly at any merchant</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="minutes">00</div>
-                    <div class="countdown-label">Minutes</div>
+              </div>
+              <!-- Brand Element -->
+              <div class="hero-brand-element">
+                <div class="brand-logo-container">
+                  <img class="brand-logo" src="assets/Only_logo.svg" alt="Kwikpay logo" width="80" height="80"/>
+                  <div class="brand-glow"></div>
                 </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="seconds">00</div>
-                    <div class="countdown-label">Seconds</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Pay by Car (Simplified) -->
+    <section id="pay-by-car" class="py-6">
+      <div class="lottie-container" id="lottie-scene"></div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="h1 fw-bold mb-3">Pay by Car</h2>
+            <p class="lead text-body-secondary mb-4">Experience seamless parking with Kwik Pay's smart tag technology. No more fumbling for cash or cards—just drive through and pay automatically.</p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="pay_by_car.html" class="btn btn-primary btn-lg px-4">
+                <i class="bi bi-car-front me-2"></i>Learn More
+              </a>
+              <a href="#download" class="btn btn-outline-primary btn-lg px-4">
+                <i class="bi bi-phone me-2"></i>Get the app
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="pbc-step-card text-center">
+                  <div class="pbc-step-icon mx-auto mb-3">
+                    <i class="bi bi-tag-fill"></i>
+                  </div>
+                  <h3 class="h6 mb-2">Get Tag</h3>
+                  <p class="text-body-secondary small mb-0">Attach Kwikpass tag to windshield</p>
                 </div>
+              </div>
+              <div class="col-6">
+                <div class="pbc-step-card text-center">
+                  <div class="pbc-step-icon mx-auto mb-3">
+                    <i class="bi bi-wifi"></i>
+                  </div>
+                  <h3 class="h6 mb-2">Auto Detection</h3>
+                  <p class="text-body-secondary small mb-0">Gate detects your car automatically</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="pbc-step-card text-center">
+                  <div class="pbc-step-icon mx-auto mb-3">
+                    <i class="bi bi-phone"></i>
+                  </div>
+                  <h3 class="h6 mb-2">Approve Payment</h3>
+                  <p class="text-body-secondary small mb-0">Tap to approve on your phone</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="pbc-step-card text-center">
+                  <div class="pbc-step-icon mx-auto mb-3">
+                    <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                  <h3 class="h6 mb-2">Drive Through</h3>
+                  <p class="text-body-secondary small mb-0">Gate opens, you're on your way</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Features -->
+    <section id="features" class="py-6 bg-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8">
+            <h2 class="h1 fw-bold mb-3">Features</h2>
+            <p class="text-body-secondary mb-0">Explore our comprehensive suite of payment solutions designed for customers, merchants, and drivers.</p>
+          </div>
+        </div>
+        
+        <!-- Tabs for Consumer/Merchant/Pay by Car -->
+        <ul class="nav nav-pills mb-4 justify-content-center" id="servicesTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active px-4 py-2" id="consumer-tab" data-bs-toggle="pill" data-bs-target="#consumer" type="button" role="tab" aria-controls="consumer" aria-selected="true">
+              <i class="bi bi-person me-2"></i>For Consumers
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link px-4 py-2" id="merchant-tab" data-bs-toggle="pill" data-bs-target="#merchant" type="button" role="tab" aria-controls="merchant" aria-selected="false">
+              <i class="bi bi-shop me-2"></i>For Merchants
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link px-4 py-2" id="corporate-tab" data-bs-toggle="pill" data-bs-target="#corporate" type="button" role="tab" aria-controls="corporate" aria-selected="false">
+              <i class="bi bi-people-fill me-2"></i>For Corporates
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="servicesTabContent">
+          <!-- Consumer Services -->
+          <div class="tab-pane fade show active" id="consumer" role="tabpanel" aria-labelledby="consumer-tab">
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-person-plus-fill"></i>
+                  </div>
+                  <h3 class="h5">Person to Person Transfers</h3>
+                  <p class="mb-0 text-body-secondary">Send money instantly to friends and family with just their phone number.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-qr-code"></i>
+                  </div>
+                  <h3 class="h5">QR Code Payments</h3>
+                  <p class="mb-0 text-body-secondary">Scan and pay quickly at any merchant displaying Kwik Pay QR codes.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-phone-fill"></i>
+                  </div>
+                  <h3 class="h5">Pay by Mobile Number</h3>
+                  <p class="mb-0 text-body-secondary">Make secure payments using just the recipient's phone number.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-arrow-repeat"></i>
+                  </div>
+                  <h3 class="h5">Quick Recharge</h3>
+                  <p class="mb-0 text-body-secondary">Top up mobile, internet, and utility services in seconds.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-calendar-check"></i>
+                  </div>
+                  <h3 class="h5">Subscription Management</h3>
+                  <p class="mb-0 text-body-secondary">Track and manage all your recurring payments in one place.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <h3 class="h5">Split Bills Easily</h3>
+                  <p class="mb-0 text-body-secondary">Divide expenses with friends and track who's paid their share.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-car-front-fill"></i>
+                  </div>
+                  <h3 class="h5">Pay by Car</h3>
+                  <p class="mb-0 text-body-secondary">Pay for parking with your Kwik Pay account.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-arrow-left-right"></i>
+                  </div>
+                  <h3 class="h5">Request To Pay</h3>
+                  <p class="mb-0 text-body-secondary">Send payment requests to customers for easier collection.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Merchant Services -->
+          <div class="tab-pane fade" id="merchant" role="tabpanel" aria-labelledby="merchant-tab">
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-shop"></i>
+                  </div>
+                  <h3 class="h5">In-Store Payments</h3>
+                  <p class="mb-0 text-body-secondary">Accept payments in your physical store with QR codes or payment links.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-globe"></i>
+                  </div>
+                  <h3 class="h5">Online Payments</h3>
+                  <p class="mb-0 text-body-secondary">Integrate Kwik Pay into your website or app for seamless checkout.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-phone-vibrate"></i>
+                  </div>
+                  <h3 class="h5">Contactless Transactions</h3>
+                  <p class="mb-0 text-body-secondary">Enable touch-free payments for safer, faster transactions.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-receipt"></i>
+                  </div>
+                  <h3 class="h5">Digital Invoicing</h3>
+                  <p class="mb-0 text-body-secondary">Create and send professional invoices with instant payment links.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-cash-stack"></i>
+                  </div>
+                  <h3 class="h5">Request to Pay</h3>
+                  <p class="mb-0 text-body-secondary">Send payment requests to customers for easier collection.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-arrow-left-right"></i>
+                  </div>
+                  <h3 class="h5">Bulk Payments</h3>
+                  <p class="mb-0 text-body-secondary">Process multiple payments at once for efficient operations.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-car-front-fill"></i>
+                  </div>
+                  <h3 class="h5">Pay by Car</h3>
+                  <p class="mb-0 text-body-secondary">Pay for parking with your Kwik Pay account.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- corporate Services -->
+          <div class="tab-pane fade" id="corporate" role="tabpanel" aria-labelledby="corporate-tab">
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <h3 class="h5">Salary Transfer</h3>
+                  <p class="mb-0 text-body-secondary">Efficient and secure salary transfer services for businesses and employees.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-car-front-fill"></i>
+                  </div>
+                  <h3 class="h5">Fleet Management</h3>
+                  <p class="mb-0 text-body-secondary">Comprehensive fleet management and payment solutions for businesses.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-building"></i>
+                  </div>
+                  <h3 class="h5">Business to Business</h3>
+                  <p class="mb-0 text-body-secondary">Comprehensive B2B payment solutions for corporate transactions.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-receipt"></i>
+                  </div>
+                  <h3 class="h5">Digital Invoicing</h3>
+                  <p class="mb-0 text-body-secondary">Create and send professional invoices with instant payment links.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-arrow-left-right"></i>
+                  </div>
+                  <h3 class="h5">Bulk Payments</h3>
+                  <p class="mb-0 text-body-secondary">Process multiple payments at once for efficient operations.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100 p-4">
+                  <div class="icon-wrap text-primary mb-3">
+                    <i class="bi bi-car-front-fill"></i>
+                  </div>
+                  <h3 class="h5">Pay by Car</h3>
+                  <p class="mb-0 text-body-secondary">Pay for parking with your Kwik Pay account.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Security -->
+    <section id="security" class="py-6 bg-gradient-navy">
+      <div class="container text-white">
+        <div class="row mb-4">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="h1 fw-bold mb-3">Our Assurance</h2>
+            <p class="mb-0 opacity-85">Your trust is our priority — we safeguard your money and data with world-class security measures.</p>
+          </div>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="security-feature-card">
+              <div class="security-icon">
+                <i class="bi bi-shield-lock"></i>
+              </div>
+              <h3 class="h5">End-to-End Encryption</h3>
+              <p>All communications and transactions are protected with 256-bit encryption using industry-leading protocols.</p>
+              <div class="security-badge">
+                <span>256-bit</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="security-feature-card">
+              <div class="security-icon">
+                <i class="bi bi-fingerprint"></i>
+              </div>
+              <h3 class="h5">Biometric Authentication</h3>
+              <p>Secure account access with multi-factor authentication, including biometrics (fingerprint/face ID) and PIN.</p>
+              <div class="security-badge">
+                <span>Multi-factor</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="security-feature-card">
+              <div class="security-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3 class="h5">Intelligent Threat Monitoring</h3>
+              <p>Real-time monitoring systems detect and prevent suspicious activities.</p>
+              <div class="security-badge">
+                <span>24/7</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="security-feature-card">
+              <div class="security-icon">
+                <i class="bi bi-building-lock"></i>
+              </div>
+              <h3 class="h5">Full Regulatory Compliance</h3>
+              <p>Built for Kuwait with full compliance to local financial regulations.</p>
+              <div class="security-badge">
+                <span>Certified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col-lg-8 mx-auto">
+            <div class="security-standards">
+              <h4>Our Security Certifications</h4>
+              <div class="security-standards-grid">
+                <div class="security-standard-item">
+                  <i class="bi bi-lock"></i>
+                  <span>PCI DSS</span>
+                </div>
+                <div class="security-standard-item">
+                  <i class="bi bi-shield"></i>
+                  <span>ISO 27701</span>
+                </div>
+                <div class="security-standard-item">
+                  <i class="bi bi-eye-slash"></i>
+                  <span>GDPR</span>
+                </div>
+                <div class="security-standard-item">
+                  <i class="bi bi-patch-check"></i>
+                  <span>SOC 2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile App Showcase -->
+    <section id="mobile-showcase" class="py-6 bg-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="h1 fw-bold mb-3">Experience Kwik Pay App</h2>
+            <p class="text-body-secondary mb-0">Swipe through our app screens to see how Kwik Pay makes payments simple and secure.</p>
+          </div>
+        </div>
+        
+        <div class="mobile-carousel-container">
+          <div class="mobile-carousel" id="mobileCarousel">
+            <!-- Screen 1: Home Dashboard -->
+            <div class="mobile-screen active">
+              <div class="phone-frame">
+                <div class="phone-screen">
+                  <div class="app-header">
+                    <div class="status-bar">
+                      <span class="time">9:41</span>
+                      <div class="status-icons">
+                        <i class="bi bi-signal-4"></i>
+                        <i class="bi bi-wifi"></i>
+                        <i class="bi bi-battery-full"></i>
+                      </div>
+                    </div>
+                    <div class="app-nav">
+                      <img src="assets/Only_logo.svg" alt="Kwikpay" width="24" height="24"/>
+                      <span class="app-title">Kwik Pay</span>
+                      <i class="bi bi-bell"></i>
+                    </div>
+                  </div>
+                  <div class="app-content">
+                    <div class="balance-card">
+                      <div class="balance-label">Available Balance</div>
+                      <div class="balance-amount">KWD 2,450.00</div>
+                      <div class="balance-actions">
+                        <button class="action-btn">
+                          <i class="bi bi-plus"></i>
+                          <span>Top Up</span>
+                        </button>
+                        <button class="action-btn">
+                          <i class="bi bi-arrow-up-right"></i>
+                          <span>Send</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="quick-actions">
+                      <div class="action-item">
+                        <div class="action-icon">
+                          <i class="bi bi-qr-code-scan"></i>
+                        </div>
+                        <span>Scan & Pay</span>
+                      </div>
+                      <div class="action-item">
+                        <div class="action-icon">
+                          <i class="bi bi-phone"></i>
+                        </div>
+                        <span>Pay by Number</span>
+                      </div>
+                      <div class="action-item">
+                        <div class="action-icon">
+                          <i class="bi bi-receipt"></i>
+                        </div>
+                        <span>Bills</span>
+                      </div>
+                      <div class="action-item">
+                        <div class="action-icon">
+                          <i class="bi bi-car-front"></i>
+                        </div>
+                        <span>Parking</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="notify-form" style="display: none;">
-                <input type="email" placeholder="Enter your email" class="notify-input">
-                <button class="btn-primary">Notify Me</button>
+            <!-- Screen 2: QR Payment -->
+            <div class="mobile-screen">
+              <div class="phone-frame">
+                <div class="phone-screen">
+                  <div class="app-header">
+                    <div class="status-bar">
+                      <span class="time">9:41</span>
+                      <div class="status-icons">
+                        <i class="bi bi-signal-4"></i>
+                        <i class="bi bi-wifi"></i>
+                        <i class="bi bi-battery-full"></i>
+                      </div>
+                    </div>
+                    <div class="app-nav">
+                      <i class="bi bi-arrow-left"></i>
+                      <span class="app-title">Scan & Pay</span>
+                      <i class="bi bi-flashlight"></i>
+                    </div>
+                  </div>
+                  <div class="app-content">
+                    <div class="qr-scanner">
+                      <div class="scanner-frame">
+                        <div class="scanner-corner top-left"></div>
+                        <div class="scanner-corner top-right"></div>
+                        <div class="scanner-corner bottom-left"></div>
+                        <div class="scanner-corner bottom-right"></div>
+                        <div class="scanner-line"></div>
+                      </div>
+                      <div class="scanner-text">
+                        <p>Position QR code within frame</p>
+                        <span>Scan to pay instantly</span>
+                      </div>
+                    </div>
+                    <div class="payment-options">
+                      <button class="payment-option">
+                        <i class="bi bi-image"></i>
+                        <span>Upload QR Code</span>
+                      </button>
+                      <button class="payment-option">
+                        <i class="bi bi-keyboard"></i>
+                        <span>Enter Amount</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- Screen 3: Payment Success -->
+            <div class="mobile-screen">
+              <div class="phone-frame">
+                <div class="phone-screen payment-success-screen">
+                  <div class="app-header">
+                    <div class="status-bar">
+                      <span class="time">9:41</span>
+                      <div class="status-icons">
+                        <i class="bi bi-signal-4"></i>
+                        <i class="bi bi-wifi"></i>
+                        <i class="bi bi-battery-full"></i>
+                      </div>
+                    </div>
+                    <div class="app-nav">
+                      <i class="bi bi-arrow-left"></i>
+                      <span class="app-title">Payment Success</span>
+                      <i class="bi bi-three-dots-horizontal"></i>
+                    </div>
+                  </div>
+                  <div class="app-content">
+                    <div class="success-content">
+                      <div class="success-icon">
+                        <div class="success-circle">
+                          <i class="bi bi-check-lg"></i>
+                        </div>
+                      </div>
+                      <div class="success-message">
+                        <h3>Money Added Successfully!</h3>
+                      </div>
+                      <div class="amount-display">
+                        <div class="amount">30.500 KWD</div>
+                        <div class="payment-date">Paid on 18 June 2025, 1:36pm</div>
+                      </div>
+                    </div>
+                    <div class="quick-actions">
+                      <div class="action-item">
+                        <div class="action-icon">
+                          <i class="bi bi-arrow-up-right"></i>
+                        </div>
+                        <span>Send Money</span>
+                      </div>
+                      <div class="action-item">
+                        <div class="action-icon">
+                          <i class="bi bi-receipt"></i>
+                        </div>
+                        <span>Transaction History</span>
+                      </div>
+                      <div class="action-item">
+                        <div class="action-icon">
+                          <i class="bi bi-house"></i>
+                        </div>
+                        <span>Back to Home</span>
+                      </div>
+                      <div class="action-item">
+                        <div class="action-icon">
+                          <i class="bi bi-person-plus"></i>
+                        </div>
+                        <span>Invite and Earn</span>
+                      </div>
+                    </div>
+                    <div class="marketing-banner">
+                      <div class="banner-content">
+                        <h4>Invite your friends and family to win exciting Rewards!</h4>
+                        <button class="refer-btn">Refer Now</button>
+                      </div>
+                      <div class="banner-illustration">
+                        <div class="welcome-illustration"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 4: Pay by Car -->
+            <div class="mobile-screen">
+              <div class="phone-frame">
+                <div class="phone-screen">
+                  <div class="app-header">
+                    <div class="status-bar">
+                      <span class="time">9:41</span>
+                      <div class="status-icons">
+                        <i class="bi bi-signal-4"></i>
+                        <i class="bi bi-wifi"></i>
+                        <i class="bi bi-battery-full"></i>
+                      </div>
+                    </div>
+                    <div class="app-nav">
+                      <i class="bi bi-arrow-left"></i>
+                      <span class="app-title">Pay by Car</span>
+                      <i class="bi bi-gear"></i>
+                    </div>
+                  </div>
+                  <div class="app-content">
+                    <div class="car-payment-card">
+                      <div class="car-icon">
+                        <i class="bi bi-car-front-fill"></i>
+                      </div>
+                      <h3>Parking Payment</h3>
+                      <div class="parking-details">
+                        <div class="detail-item">
+                          <span class="label">Location:</span>
+                          <span class="value">Marina Mall Parking</span>
+                        </div>
+                        <div class="detail-item">
+                          <span class="label">Duration:</span>
+                          <span class="value">2 hours 15 min</span>
+                        </div>
+                        <div class="detail-item">
+                          <span class="label">Amount:</span>
+                          <span class="value amount">KWD 3.50</span>
+                        </div>
+                      </div>
+                      <button class="approve-btn">
+                        <i class="bi bi-check-circle"></i>
+                        Approve Payment
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 5: Profile & Settings -->
+            <div class="mobile-screen">
+              <div class="phone-frame">
+                <div class="phone-screen">
+                  <div class="app-header">
+                    <div class="status-bar">
+                      <span class="time">9:41</span>
+                      <div class="status-icons">
+                        <i class="bi bi-signal-4"></i>
+                        <i class="bi bi-wifi"></i>
+                        <i class="bi bi-battery-full"></i>
+                      </div>
+                    </div>
+                    <div class="app-nav">
+                      <span class="app-title">Profile</span>
+                      <i class="bi bi-gear"></i>
+                    </div>
+                  </div>
+                  <div class="app-content">
+                    <div class="profile-header">
+                      <div class="profile-avatar">
+                        <i class="bi bi-person-fill"></i>
+                      </div>
+                      <div class="profile-info">
+                        <h3>Ahmed Al-Rashid</h3>
+                        <span>+965 500 12345</span>
+                        <div class="verification-badge">
+                          <i class="bi bi-patch-check-fill"></i>
+                          Verified User
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile-menu">
+                      <div class="menu-item">
+                        <i class="bi bi-wallet2"></i>
+                        <span>Wallet Settings</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </div>
+                      <div class="menu-item">
+                        <i class="bi bi-shield-check"></i>
+                        <span>Security</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </div>
+                      <div class="menu-item">
+                        <i class="bi bi-clock-history"></i>
+                        <span>Transaction History</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </div>
+                      <div class="menu-item">
+                        <i class="bi bi-headset"></i>
+                        <span>Support</span>
+                        <i class="bi bi-chevron-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Navigation Dots -->
+          <div class="carousel-dots">
+            <button class="dot active" data-slide="0"></button>
+            <button class="dot" data-slide="1"></button>
+            <button class="dot" data-slide="2"></button>
+            <button class="dot" data-slide="3"></button>
+            <button class="dot" data-slide="4"></button>
+          </div>
+          
+          <!-- Navigation Arrows -->
+          <button class="carousel-arrow prev" id="prevBtn">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="carousel-arrow next" id="nextBtn">
+            <i class="bi bi-chevron-right"></i>
+          </button>
         </div>
+      </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section id="faq" class="py-6 bg-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8">
+            <h2 class="h1 fw-bold mb-3">Frequently asked questions</h2>
+            <p class="text-body-secondary mb-0">Quick answers about fees, limits, and getting started.</p>
+          </div>
+        </div>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                Is there a fee to send money?
+              </button>
+            </h2>
+            <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Most peer‑to‑peer transfers are free. Merchant fees may apply based on the service.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                What are the limits for new users?
+              </button>
+            </h2>
+            <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">KYC‑verified users enjoy higher monthly and transaction limits, in line with local guidelines.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                Can I pay at stores with Kwik Pay?
+              </button>
+            </h2>
+            <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes, pay in‑store using QR codes wherever Kwik Pay is accepted.</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div>
-                    <img src="assets/images/logo1.svg" alt="KwikPay Logo" class="logo-svg">
-
-                    <p class="text-gray-400">Quick Payments International Co. (K.S.C.C)</p>
-                    <p class="text-gray-400">11th floor,B building,Al BairaqMall,<br> Equila Fintas 50013 </p>
-                    <p class="text-gray-400">info@kwikpay.com.kw</p>
-                </div>
+    <footer class="py-5 border-top">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-4 mb-4">
+            <a class="d-inline-flex align-items-center gap-2 text-decoration-none" href="#hero">
+              <img src="assets/Only_logo.svg" alt="Kwikpay" height="28" />
+              <span class="fw-semibold text-body">Kwik Pay</span>
+            </a>
+            <p class="text-body-secondary mt-3 mb-0">Kuwait's modern digital e‑wallet. Pay, transfer, and manage money securely and instantly.</p>
+            <div class="d-flex gap-3 mt-3">
+              <a class="text-body" href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+              <a class="text-body" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a class="text-body" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a class="text-body" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             </div>
-            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-                <p>&copy; 2025 KwikPay. All rights reserved.</p>
-            </div>
+          </div>
+          
+          <div class="col-6 col-md-2">
+            <h5 class="fw-semibold mb-3">Product</h5>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a class="text-decoration-none" href="#features">Features</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="#pay-by-car">Pay by Car</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="#security">Security</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="#download">Download</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-6 col-md-2">
+            <h5 class="fw-semibold mb-3">Company</h5>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a class="text-decoration-none" href="templates/about.html">About Us</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="templates/services.html">Services</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="#faq">FAQ</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="templates/contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-6 col-md-2">
+            <h5 class="fw-semibold mb-3">Legal</h5>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a class="text-decoration-none" href="#">Terms & Conditions</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="#">Privacy Policy</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="#">Cookie Policy</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="#">Licenses</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-6 col-md-2">
+            <h5 class="fw-semibold mb-3">Support</h5>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a class="text-decoration-none" href="#">Help Center</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="#">Report an Issue</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="#">Feedback</a></li>
+            </ul>
+          </div>
         </div>
+        
+        <div class="row mt-4 pt-4 border-top">
+          <div class="col-12 col-md-6">
+            <p class="text-body-secondary small mb-0">© <span id="year"></span> Kwik Pay. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
     </footer>
 
-</body>
-</html> 
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/threejs-mobile.js"></script>
+  </body>
+  </html>
+
+
+
+

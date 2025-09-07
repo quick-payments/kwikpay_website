@@ -1,0 +1,17 @@
+{
+  "name": "kwikpay-website",
+  "version": "1.0.0",
+  "description": "Kwikpay Website with Lottie Animations",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -c-1",
+    "dev": "npx live-server --port=8000 --open=/lottie-demo.html"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "keywords": ["kwikpay", "lottie", "animations", "website"],
+  "author": "Kwikpay Team",
+  "license": "MIT"
+}
