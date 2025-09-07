@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Image data with titles and descriptions
     const imageData = [
         {
-            title: "Mountain Landscape",
-            description: "Majestic peaks covered in snow during golden hour"
+            title: "Kwik Pay Wallet",
+            description: "No more fumbling for cash or cards—just drive through and pay automatically."
         },
         {
-            title: "Forest Path",
-            description: "A winding trail through ancient woodland"
+            title: "Fleet Management",
+            description: "Efficient fleet management for businesses."
         },
         {
             title: "Lake Reflection",
