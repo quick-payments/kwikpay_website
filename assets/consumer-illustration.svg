@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+  <style>
+    .st0{fill:#F0F7FF;}
+    .st1{fill:#0980FF;}
+    .st2{fill:#FFFFFF;}
+    .st3{fill:#002C5A;}
+    .st4{fill:#D0E5FB;}
+    .st5{fill:#0355AD;}
+  </style>
+  <rect class="st0" width="500" height="300" rx="20"/>
+  
+  <!-- Phone -->
+  <rect x="120" y="60" width="120" height="220" rx="15" class="st3"/>
+  <rect x="125" y="70" width="110" height="200" rx="10" class="st2"/>
+  <rect x="125" y="70" width="110" height="40" rx="10" class="st1"/>
+  <circle cx="180" cy="260" r="10" class="st4"/>
+  
+  <!-- App UI Elements -->
+  <rect x="135" y="120" width="90" height="40" rx="8" class="st1"/>
+  <rect x="135" y="170" width="40" height="30" rx="5" class="st4"/>
+  <rect x="185" y="170" width="40" height="30" rx="5" class="st4"/>
+  <rect x="135" y="210" width="40" height="30" rx="5" class="st4"/>
+  <rect x="185" y="210" width="40" height="30" rx="5" class="st4"/>
+  
+  <!-- Person -->
+  <circle cx="330" cy="110" r="40" class="st5"/>
+  <rect x="290" y="150" width="80" height="100" rx="10" class="st5"/>
+  <circle cx="330" cy="110" r="30" class="st2"/>
+  
+  <!-- Payment Icons -->
+  <circle cx="390" cy="180" r="25" class="st1"/>
+  <circle cx="390" cy="180" r="15" class="st2"/>
+  
+  <circle cx="270" cy="180" r="25" class="st1"/>
+  <circle cx="270" cy="180" r="15" class="st2"/>
+  
+  <!-- Connection Lines -->
+  <line x1="240" y1="150" x2="290" y2="150" stroke="#0980FF" stroke-width="3" stroke-dasharray="5,5"/>
+  <line x1="240" y1="180" x2="270" y2="180" stroke="#0980FF" stroke-width="3"/>
+  <line x1="370" y1="180" x2="390" y2="180" stroke="#0980FF" stroke-width="3"/>
+</svg>

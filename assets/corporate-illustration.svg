@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+  <style>
+    .st0{fill:#F0F7FF;}
+    .st1{fill:#0980FF;}
+    .st2{fill:#FFFFFF;}
+    .st3{fill:#002C5A;}
+    .st4{fill:#D0E5FB;}
+    .st5{fill:#0355AD;}
+  </style>
+  <rect class="st0" width="500" height="300" rx="20"/>
+  
+  <!-- Building -->
+  <rect x="100" y="80" width="150" height="170" rx="5" class="st3"/>
+  <rect x="110" y="90" width="130" height="150" class="st5"/>
+  
+  <!-- Windows -->
+  <rect x="120" y="100" width="20" height="20" rx="2" class="st2"/>
+  <rect x="150" y="100" width="20" height="20" rx="2" class="st2"/>
+  <rect x="180" y="100" width="20" height="20" rx="2" class="st2"/>
+  
+  <rect x="120" y="130" width="20" height="20" rx="2" class="st2"/>
+  <rect x="150" y="130" width="20" height="20" rx="2" class="st2"/>
+  <rect x="180" y="130" width="20" height="20" rx="2" class="st2"/>
+  
+  <rect x="120" y="160" width="20" height="20" rx="2" class="st2"/>
+  <rect x="150" y="160" width="20" height="20" rx="2" class="st2"/>
+  <rect x="180" y="160" width="20" height="20" rx="2" class="st2"/>
+  
+  <rect x="120" y="190" width="20" height="20" rx="2" class="st2"/>
+  <rect x="150" y="190" width="20" height="20" rx="2" class="st2"/>
+  <rect x="180" y="190" width="20" height="20" rx="2" class="st2"/>
+  
+  <!-- Door -->
+  <rect x="140" y="220" width="30" height="30" rx="2" class="st2"/>
+  
+  <!-- Charts & Graphs -->
+  <rect x="280" y="100" width="150" height="100" rx="10" class="st2" stroke="#0980FF" stroke-width="2"/>
+  
+  <!-- Bar Chart -->
+  <rect x="300" y="160" width="15" height="20" class="st1"/>
+  <rect x="325" y="140" width="15" height="40" class="st1"/>
+  <rect x="350" y="120" width="15" height="60" class="st1"/>
+  <rect x="375" y="150" width="15" height="30" class="st1"/>
+  <rect x="400" y="130" width="15" height="50" class="st1"/>
+  
+  <!-- Document -->
+  <rect x="280" y="210" width="150" height="40" rx="5" class="st4"/>
+  <line x1="300" y1="220" x2="410" y2="220" stroke="#0980FF" stroke-width="2"/>
+  <line x1="300" y1="230" x2="380" y2="230" stroke="#0980FF" stroke-width="2"/>
+  <line x1="300" y1="240" x2="400" y2="240" stroke="#0980FF" stroke-width="2"/>
+  
+  <!-- Connection Lines -->
+  <line x1="250" y1="150" x2="280" y2="150" stroke="#0980FF" stroke-width="3" stroke-dasharray="5,5"/>
+</svg>

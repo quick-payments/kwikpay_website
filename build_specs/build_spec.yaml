@@ -1,0 +1,68 @@
+version: 0.1
+component: build
+timeoutInSeconds: 1200
+shell: bash
+failImmediatelyOnError: true
+
+env:
+  vaultVariables:
+    DOCKER_PASSWORD: "ocid1.vaultsecret.oc1.me-dubai-1.amaaaaaahhicarqasmv4q2m5gq2ljnt4tdoqolxuwd5uxnshjxrg7a2c4qza"
+  exportedVariables:
+    - BUILDRUN_HASH
+    - IMAGE_NAME
+
+steps:
+  - type: Command
+    name: Generate version and image name
+    command: |
+      echo "Generating image version"
+      BUILDRUN_HASH=$(echo "${OCI_BUILD_RUN_ID}" | rev | cut -c1-7 | rev)
+      IMAGE_NAME="dxb.ocir.io/ax2jvbbgjme7/kwikpay-website:${BUILDRUN_HASH}"                           ##################
+      echo "BUILDRUN_HASH=${BUILDRUN_HASH}" | tee -a "$OCI_WORKSPACE_DIR/exported_variables"
+      echo "IMAGE_NAME=${IMAGE_NAME}" | tee -a "$OCI_WORKSPACE_DIR/exported_variables"
+      echo "Generated IMAGE_NAME: ${IMAGE_NAME}"
+
+  - type: Command
+    name: Login to OCIR
+    command: |
+      echo "Logging in to OCIR"
+      echo "${DOCKER_PASSWORD}" | docker login dxb.ocir.io \
+        -u "ax2jvbbgjme7/devops.user" --password-stdin
+      echo "Login successful."
+
+  - type: Command
+    name: Build Docker Image
+    command: |
+      echo "Building Docker image: ${IMAGE_NAME}"
+      docker build -t "${IMAGE_NAME}" .
+      echo "Docker image build complete."
+
+  - type: Command
+    name: Push Docker Image
+    command: |
+      echo "Pushing Docker image: ${IMAGE_NAME}"
+      docker push "${IMAGE_NAME}"
+      echo "Image pushed to OCIR."
+
+  - type: Command
+    name: Copy artifacts to workspace
+    command: |
+      echo "Copying deployment files to workspace for deploy stage..."
+      ls -l
+
+      echo "Checking if deployment_spec.yaml exists..."
+
+      if [ -f "deployment_specs/deployment_spec.yaml" ]; then                       
+        cp deployment_specs/deployment_spec.yaml ./deployment_spec.yaml            
+        echo "deployment_spec.yaml copied."
+        echo "Verifying file exists in current directory:"
+        ls -la ./deployment_spec.yaml                                                 
+      else
+        echo "Error: deployment_spec.yaml not found!"
+        exit 1
+      fi
+
+outputArtifacts:
+  - name: deployment_spec
+    type: BINARY
+    location: deployment_spec.yaml

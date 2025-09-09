@@ -13,6 +13,9 @@
     <!-- Three.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/Only_logo.css" rel="stylesheet" />
@@ -37,10 +40,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-            <li class="nav-item"><a class="nav-link" href="templates/about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="templates/pay_by_car.html">Pay by Car</a></li>
-            <li class="nav-item"><a class="nav-link" href="templates/contact.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services-section">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
             <li class="nav-item ms-lg-3"><a class="btn btn-primary px-3" href="#download">Get the app</a></li>
           </ul>
         </div>
@@ -128,13 +130,13 @@
 
 
 
-    <!-- Pay by Car (Simplified) -->
+    <!-- Kwik Pass (Simplified) -->
     <section id="pay-by-car" class="py-6">
       <div class="lottie-container" id="lottie-scene"></div>
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <h2 class="h1 fw-bold mb-3">Pay by Car</h2>
+            <h2 class="h1 fw-bold mb-3">Kwik Pass</h2>
             <p class="lead text-body-secondary mb-4">Experience seamless parking with Kwik Pay's smart tag technology. No more fumbling for cash or cards—just drive through and pay automatically.</p>
             <div class="d-flex gap-3 flex-wrap">
               <a href="pay_by_car.html" class="btn btn-primary btn-lg px-4">
@@ -191,6 +193,292 @@
 
 
 
+    <!-- Services Section -->
+    <section id="services-section" class="py-6 bg-gradient-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold px-3 py-2">Our Services</span>
+            <h2 class="h1 fw-bold mt-3 mb-3">Comprehensive Digital Payment Solutions</h2>
+            <p class="text-body-secondary mb-0">Explore our tailored services designed for consumers, merchants, and corporate clients.</p>
+          </div>
+        </div>
+        
+        <!-- Service Category Navigation -->
+        <div class="service-category-nav mb-5">
+          <ul class="nav nav-pills justify-content-center service-tabs" id="servicesTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active px-4 py-3" id="consumer-services-tab" data-bs-toggle="pill" data-bs-target="#consumer-services" type="button" role="tab" aria-controls="consumer-services" aria-selected="true">
+                <i class="bi bi-person-fill me-2"></i>For Consumers
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link px-4 py-3" id="merchant-services-tab" data-bs-toggle="pill" data-bs-target="#merchant-services" type="button" role="tab" aria-controls="merchant-services" aria-selected="false">
+                <i class="bi bi-shop me-2"></i>For Merchants
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link px-4 py-3" id="corporate-services-tab" data-bs-toggle="pill" data-bs-target="#corporate-services" type="button" role="tab" aria-controls="corporate-services" aria-selected="false">
+                <i class="bi bi-building me-2"></i>For Corporates
+              </button>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Service Content -->
+        <div class="tab-content" id="servicesTabContent">
+          <!-- Consumer Services -->
+          <div class="tab-pane fade show active" id="consumer-services" role="tabpanel" aria-labelledby="consumer-services-tab">
+            <div class="service-intro mb-4">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <h3 class="h2 mb-3">For Consumers</h3>
+                  <p class="lead">Experience the freedom of managing your money with our intuitive consumer services. From instant transfers to bill payments, we've got you covered.</p>
+                </div>
+                <div class="col-lg-6">
+                  <div class="service-illustration text-center">
+                    <img src="assets/consumer-illustration.svg" alt="Consumer Services" class="img-fluid" onerror="this.src='https://via.placeholder.com/500x300?text=Consumer+Services'">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Consumer Service Types -->
+            <div class="row g-4 mb-5">
+              <!-- Digital Wallet -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-type-card h-100">
+                  <div class="service-type-header">
+                    <div class="service-icon">
+                      <i class="bi bi-wallet2"></i>
+                    </div>
+                    <h4>Digital Wallet</h4>
+                  </div>
+                  <div class="service-features">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check-circle-fill"></i> Send by Mobile Number</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Secure Payments</li>
+                      <li><i class="bi bi-check-circle-fill"></i> QR Code Payments</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Money Request</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Transaction History</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Bill Payments -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-type-card h-100">
+                  <div class="service-type-header">
+                    <div class="service-icon">
+                      <i class="bi bi-receipt"></i>
+                    </div>
+                    <h4>Bill Payments</h4>
+                  </div>
+                  <div class="service-features">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check-circle-fill"></i> Utility Bills</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Mobile Recharge</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Internet Services</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Subscription Management</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Scheduled Payments</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Kwik Pass -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-type-card h-100">
+                  <div class="service-type-header">
+                    <div class="service-icon">
+                      <i class="bi bi-car-front-fill"></i>
+                    </div>
+                    <h4>Kwik Pass</h4>
+                  </div>
+                  <div class="service-features">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check-circle-fill"></i> Automated Parking Payments</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Smart Tag Technology</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Toll Payments</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Gas Station Payments</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Drive-through Payments</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Merchant Services -->
+          <div class="tab-pane fade" id="merchant-services" role="tabpanel" aria-labelledby="merchant-services-tab">
+            <div class="service-intro mb-4">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <h3 class="h2 mb-3">For Merchants</h3>
+                  <p class="lead">Transform your business with our merchant solutions. Accept payments seamlessly, manage transactions efficiently, and grow your customer base.</p>
+                </div>
+                <div class="col-lg-6">
+                  <div class="service-illustration text-center">
+                    <img src="assets/merchant-illustration.svg" alt="Merchant Services" class="img-fluid" onerror="this.src='https://via.placeholder.com/500x300?text=Merchant+Services'">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Merchant Service Types -->
+            <div class="row g-4 mb-5">
+              <!-- Payment Acceptance -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-type-card h-100">
+                  <div class="service-type-header">
+                    <div class="service-icon">
+                      <i class="bi bi-shop"></i>
+                    </div>
+                    <h4>Payment Acceptance</h4>
+                  </div>
+                  <div class="service-features">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check-circle-fill"></i> QR Code Payments</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Payment Links</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Contactless Transactions</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Mobile Number Payments</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Online Checkout Integration</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Business Management -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-type-card h-100">
+                  <div class="service-type-header">
+                    <div class="service-icon">
+                      <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h4>Business Management</h4>
+                  </div>
+                  <div class="service-features">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check-circle-fill"></i> Digital Invoicing</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Transaction Analytics</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Customer Management</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Inventory Tracking</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Sales Reporting</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Financial Tools -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-type-card h-100">
+                  <div class="service-type-header">
+                    <div class="service-icon">
+                      <i class="bi bi-cash-stack"></i>
+                    </div>
+                    <h4>Financial Tools</h4>
+                  </div>
+                  <div class="service-features">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check-circle-fill"></i> Request to Pay</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Bulk Payments</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Settlement Reports</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Multi-account Management</li>
+                      <li><i class="bi bi-check-circle-fill"></i> API Integration</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Corporate Services -->
+          <div class="tab-pane fade" id="corporate-services" role="tabpanel" aria-labelledby="corporate-services-tab">
+            <div class="service-intro mb-4">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <h3 class="h2 mb-3">For Corporates</h3>
+                  <p class="lead">Streamline your corporate finances with our enterprise-grade payment solutions. Manage payroll, fleet expenses, and B2B transactions efficiently.</p>
+                </div>
+                <div class="col-lg-6">
+                  <div class="service-illustration text-center">
+                    <img src="assets/corporate-illustration.svg" alt="Corporate Services" class="img-fluid" onerror="this.src='https://via.placeholder.com/500x300?text=Corporate+Services'">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Corporate Service Types -->
+            <div class="row g-4 mb-5">
+              <!-- Payroll & HR -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-type-card h-100">
+                  <div class="service-type-header">
+                    <div class="service-icon">
+                      <i class="bi bi-people-fill"></i>
+                    </div>
+                    <h4>Payroll & HR</h4>
+                  </div>
+                  <div class="service-features">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check-circle-fill"></i> Salary Transfer</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Bulk Employee Payments</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Expense Management</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Employee Accounts</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Payroll Reporting</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Fleet Management -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-type-card h-100">
+                  <div class="service-type-header">
+                    <div class="service-icon">
+                      <i class="bi bi-car-front-fill"></i>
+                    </div>
+                    <h4>Fleet Management</h4>
+                  </div>
+                  <div class="service-features">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check-circle-fill"></i> Vehicle Expense Tracking</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Fuel Payments</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Maintenance Scheduling</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Driver Accounts</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Fleet Analytics</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- B2B Solutions -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-type-card h-100">
+                  <div class="service-type-header">
+                    <div class="service-icon">
+                      <i class="bi bi-building"></i>
+                    </div>
+                    <h4>B2B Solutions</h4>
+                  </div>
+                  <div class="service-features">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check-circle-fill"></i> Business to Business Payments</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Vendor Management</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Digital Invoicing</li>
+                      <li><i class="bi bi-check-circle-fill"></i> Enterprise Security</li>
+                      <li><i class="bi bi-check-circle-fill"></i> API Integration</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- Features -->
     <section id="features" class="py-6 bg-section">
       <div class="container">
@@ -201,7 +489,7 @@
           </div>
         </div>
         
-        <!-- Tabs for Consumer/Merchant/Pay by Car -->
+        <!-- Tabs for Consumer/Merchant/Kwik Pass -->
         <ul class="nav nav-pills mb-4 justify-content-center" id="servicesTab" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link active px-4 py-2" id="consumer-tab" data-bs-toggle="pill" data-bs-target="#consumer" type="button" role="tab" aria-controls="consumer" aria-selected="true">
@@ -283,7 +571,7 @@
                   <div class="icon-wrap text-primary mb-3">
                     <i class="bi bi-car-front-fill"></i>
                   </div>
-                  <h3 class="h5">Pay by Car</h3>
+                  <h3 class="h5">Kwik Pass</h3>
                   <p class="mb-0 text-body-secondary">Pay for parking with your Kwik Pay account.</p>
                 </div>
               </div>
@@ -361,7 +649,7 @@
                   <div class="icon-wrap text-primary mb-3">
                     <i class="bi bi-car-front-fill"></i>
                   </div>
-                  <h3 class="h5">Pay by Car</h3>
+                  <h3 class="h5">Kwik Pass</h3>
                   <p class="mb-0 text-body-secondary">Pay for parking with your Kwik Pay account.</p>
                 </div>
               </div>
@@ -421,7 +709,7 @@
                   <div class="icon-wrap text-primary mb-3">
                     <i class="bi bi-car-front-fill"></i>
                   </div>
-                  <h3 class="h5">Pay by Car</h3>
+                  <h3 class="h5">Kwik Pass</h3>
                   <p class="mb-0 text-body-secondary">Pay for parking with your Kwik Pay account.</p>
                 </div>
               </div>
@@ -724,7 +1012,7 @@
               </div>
             </div>
 
-            <!-- Screen 4: Pay by Car -->
+            <!-- Screen 4: Kwik Pass -->
             <div class="mobile-screen">
               <div class="phone-frame">
                 <div class="phone-screen">
@@ -739,7 +1027,7 @@
                     </div>
                     <div class="app-nav">
                       <i class="bi bi-arrow-left"></i>
-                      <span class="app-title">Pay by Car</span>
+                      <span class="app-title">Kwik Pass</span>
                       <i class="bi bi-gear"></i>
                     </div>
                   </div>
@@ -919,7 +1207,7 @@
             <h5 class="fw-semibold mb-3">Product</h5>
             <ul class="list-unstyled small">
               <li class="mb-2"><a class="text-decoration-none" href="#features">Features</a></li>
-              <li class="mb-2"><a class="text-decoration-none" href="#pay-by-car">Pay by Car</a></li>
+              <li class="mb-2"><a class="text-decoration-none" href="#pay-by-car">Kwik Pass</a></li>
               <li class="mb-2"><a class="text-decoration-none" href="#security">Security</a></li>
               <li class="mb-2"><a class="text-decoration-none" href="#download">Download</a></li>
             </ul>
@@ -968,6 +1256,32 @@
     <!-- Custom JS -->
     <script src="js/script.js"></script>
     <script src="js/threejs-mobile.js"></script>
+    <script>
+      // Initialize AOS animations
+      document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80, // Adjust for navbar height
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      });
+    </script>
   </body>
   </html>
 
