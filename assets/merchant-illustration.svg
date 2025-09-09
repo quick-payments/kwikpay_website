@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+  <style>
+    .st0{fill:#F0F7FF;}
+    .st1{fill:#0980FF;}
+    .st2{fill:#FFFFFF;}
+    .st3{fill:#002C5A;}
+    .st4{fill:#D0E5FB;}
+    .st5{fill:#0355AD;}
+  </style>
+  <rect class="st0" width="500" height="300" rx="20"/>
+  
+  <!-- Store -->
+  <rect x="100" y="100" width="180" height="150" rx="10" class="st3"/>
+  <path d="M100,130 L280,130 L280,240 Q280,250 270,250 L110,250 Q100,250 100,240 Z" class="st5"/>
+  <rect x="130" y="150" width="120" height="80" rx="5" class="st2"/>
+  
+  <!-- Store Roof -->
+  <path d="M90,100 L190,60 L290,100 Z" class="st5"/>
+  
+  <!-- QR Code -->
+  <rect x="330" y="110" width="100" height="100" rx="10" class="st2" stroke="#0980FF" stroke-width="3"/>
+  <rect x="350" y="130" width="60" height="60" class="st4"/>
+  <rect x="360" y="140" width="10" height="10" class="st1"/>
+  <rect x="380" y="140" width="10" height="10" class="st1"/>
+  <rect x="390" y="150" width="10" height="10" class="st1"/>
+  <rect x="370" y="160" width="10" height="10" class="st1"/>
+  <rect x="390" y="170" width="10" height="10" class="st1"/>
+  <rect x="360" y="180" width="10" height="10" class="st1"/>
+  
+  <!-- Connection Lines -->
+  <line x1="280" y1="160" x2="330" y2="160" stroke="#0980FF" stroke-width="3" stroke-dasharray="5,5"/>
+  
+  <!-- POS Terminal -->
+  <rect x="150" y="170" width="80" height="40" rx="5" class="st1"/>
+  <rect x="160" y="180" width="60" height="20" rx="3" class="st2"/>
+</svg>

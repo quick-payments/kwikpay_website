@@ -1,0 +1,55 @@
+version: 1.0
+component: deployment
+shell: bash
+timeoutInSeconds: 600
+
+env:
+  vaultVariables:
+    OCIR_AUTH_TOKEN: "ocid1.vaultsecret.oc1.me-dubai-1.amaaaaaahhicarqasmv4q2m5gq2ljnt4tdoqolxuwd5uxnshjxrg7a2c4qza"
+    DOCKER_USERNAME: "ocid1.vaultsecret.oc1.me-dubai-1.amaaaaaahhicarqaoe2yujfve6krxedtjnnwnvqmhr7a7e32kdhgykhv3wyq"
+    
+  variables:
+    IMAGE_NAME: "${IMAGE_NAME}"
+
+steps:
+
+  - stepType: Command
+    name: "Login to OCIR"
+    runAs: ocarun
+    command: |
+      export PATH=/usr/bin:/usr/local/bin:$PATH
+      echo "Logging in to OCIR..."
+      echo "$OCIR_AUTH_TOKEN" | podman login dxb.ocir.io -u "$DOCKER_USERNAME" --password-stdin
+      echo "Login successful."
+
+  - stepType: Command
+    name: "Clean Up Old Container"
+    runAs: ocarun
+    command: |
+      export PATH=/usr/bin:/usr/local/bin:$PATH
+      echo "Removing old Website container if exists..."
+      podman rm -f kwikpay-website || true
+      echo "Cleanup complete."
+
+  - stepType: Command
+    name: "Pull Image"
+    runAs: ocarun
+    command: |
+      export PATH=/usr/bin:/usr/local/bin:$PATH
+      echo "Pulling Kwikpay Website image..."
+      podman pull "$IMAGE_NAME" || { echo "Image pull failed"; exit 1; }
+      echo "Image pulled successfully."
+
+  - stepType: Command
+    name: "Start kwikpay-website container"
+    runAs: ocarun
+    command: |
+      export PATH=/usr/bin:/usr/local/bin:$PATH
+      echo "Starting kwikpay-website container..."
+      podman run -d \
+        --name kwikpay-website \
+        -p 8010:8010 \
+        --restart always \
+        "$IMAGE_NAME" || { echo "kwikpay-website failed to start"; exit 1; }
+
+      echo "kwikpay-website application is running on port 8010."
