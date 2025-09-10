@@ -645,6 +645,43 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Certifications and Approvals */
+.certification-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--kp-primary-500);
+}
+
+.certification-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.certification-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--kp-text);
+}
+
+.certification-card p {
+  color: var(--kp-muted);
+  margin-bottom: 0;
+}
+
 /* Core Values */
 .value-card {
   background: #fff;
@@ -755,7 +792,14 @@
 .team-title {
   color: var(--kp-muted);
   font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-bio {
+  color: var(--kp-text);
+  font-size: 0.85rem;
   margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .team-social {
