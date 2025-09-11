@@ -19,6 +19,7 @@
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/Only_logo.css" rel="stylesheet" />
+    <link href="css/hero-slider.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="assets/Only_logo.svg">
   </head>
   <body>
@@ -51,80 +52,231 @@
       </div>
     </nav>
 
-    <!-- Hero Gallery -->
+    <!-- Hero Slider Gallery -->
     <section id="hero" class="position-relative overflow-hidden">
       <div class="hero-bg" id="lottie-background"></div>
       <div class="container position-relative">
-        <div class="row align-items-center min-vh-100 py-6">
-          <div class="col-12 col-lg-5 text-center text-lg-start">
-            <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold px-3 py-2">Kuwait's modern e‑wallet</span>
-            <h1 class="display-5 fw-bold mt-3 mb-3">Scan, Pay, Done</h1>
-            <p class="lead text-body-secondary mb-4">Kwik Pay makes everyday payments simple and secure—from instant transfers to QR payments and bill settlements.</p>
-            <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
-              <a href="#download" class="btn btn-primary btn-lg px-4">
-                <i class="bi bi-phone me-2"></i>Get the app
-              </a>
-              <a href="#features" class="btn btn-outline-primary btn-lg px-4">
-                Learn more
-              </a>
+        <div class="hero-slider">
+          <!-- Slide 1 - Current Hero Content -->
+          <div class="hero-slide active">
+            <div class="row align-items-center min-vh-100 py-6">
+              <div class="col-12 col-lg-5 text-center text-lg-start">
+                <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold px-3 py-2">Kuwait's modern e‑wallet</span>
+                <h1 class="display-5 fw-bold mt-3 mb-3">Scan, Pay, Done</h1>
+                <p class="lead text-body-secondary mb-4">Kwik Pay makes everyday payments simple and secure—from instant transfers to QR payments and bill settlements.</p>
+                <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
+                  <a href="#download" class="btn btn-primary btn-lg px-4">
+                    <i class="bi bi-phone me-2"></i>Get the app
+                  </a>
+                  <a href="#features" class="btn btn-outline-primary btn-lg px-4">
+                    Learn more
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-7">
+                <div class="hero-gallery">
+                  <!-- Professional Animation Showcase -->
+                  <div class="hero-showcase-container" id="hero-showcase-container">
+                    <!-- Primary Animation Display -->
+                    <div class="hero-animation-display" id="hero-animation-display">
+                      <div class="lottie-animation-wrapper" id="lottie-hero-animation"></div>
+                      <div class="hero-overlay-content" id="hero-overlay-content">
+                        <div class="overlay-text">
+                          <h2 class="display-6 fw-bold text-white mb-3">Kwik Pay Digital Wallet</h2>
+                          <p class="lead text-white-50 mb-4">Experience seamless payments with Kwik Pay</p>
+                          <div class="overlay-features">
+                            <div class="feature-badge">
+                              <i class="bi bi-shield-check"></i>
+                              <span>Encryption & Security</span>
+                            </div>
+                            <div class="feature-badge">
+                              <i class="bi bi-lightning-charge"></i>
+                              <span>Instant Transfers</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Feature Grid -->
+                    <div class="hero-feature-grid" id="hero-feature-grid">
+                      <div class="feature-card">
+                        <div class="feature-icon">
+                          <i class="bi bi-phone-fill"></i>
+                        </div>
+                        <div class="feature-content">
+                          <h5>Mobile Payments</h5>
+                          <p>Send money instantly with just a phone number</p>
+                        </div>
+                      </div>
+                      
+                      <div class="feature-card">
+                        <div class="feature-icon">
+                          <i class="bi bi-qr-code-scan"></i>
+                        </div>
+                        <div class="feature-content">
+                          <h5>QR Payments</h5>
+                          <p>Scan and pay quickly at any merchant</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Brand Element -->
+                  <div class="hero-brand-element">
+                    <div class="brand-logo-container">
+                      <img class="brand-logo" src="assets/Only_logo.svg" alt="Kwikpay logo" width="80" height="80"/>
+                      <div class="brand-glow"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-lg-7">
-            <div class="hero-gallery">
-              <!-- Professional Animation Showcase -->
-              <div class="hero-showcase-container" id="hero-showcase-container">
-                <!-- Primary Animation Display -->
-                <div class="hero-animation-display" id="hero-animation-display">
-                  <div class="lottie-animation-wrapper" id="lottie-hero-animation"></div>
-                  <div class="hero-overlay-content" id="hero-overlay-content">
-                    <div class="overlay-text">
-                      <h2 class="display-6 fw-bold text-white mb-3">Kwik Pay Digital Wallet</h2>
-                      <p class="lead text-white-50 mb-4">Experience seamless payments with Kwik Pay</p>
-                      <div class="overlay-features">
-                        <div class="feature-badge">
-                          <i class="bi bi-shield-check"></i>
-                          <span>Encryption & Security</span>
+          
+          <!-- Slide 2 - Kwik Pass Feature -->
+          <div class="hero-slide">
+            <div class="row align-items-center min-vh-100 py-6">
+              <div class="col-12 col-lg-5 text-center text-lg-start">
+                <span class="badge rounded-pill bg-orange-subtle text-orange fw-semibold px-3 py-2">Revolutionary Feature</span>
+                <h1 class="display-5 fw-bold mt-3 mb-3">Introducing Kwik Pass</h1>
+                <p class="lead text-body-secondary mb-4">The future of contactless vehicle payments has arrived in Kuwait. Pay for parking, tolls, and drive-throughs without stopping.</p>
+                <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
+                  <a href="#kwikpass" class="btn btn-primary btn-lg px-4">
+                    <i class="bi bi-car-front me-2"></i>Learn More
+                  </a>
+                  <a href="#download" class="btn btn-outline-primary btn-lg px-4">
+                    Get Started
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-7">
+                <div class="hero-gallery">
+                  <div class="kwikpass-hero-showcase">
+                    <div class="kwikpass-professional">
+                      <div class="kwikpass-tag-pro">
+                        <div class="tag-chip-pro"></div>
+                        <div class="tag-logo-pro">
+                          <span class="logo-text">Kwik Pass</span>
+                          <div class="logo-icon">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                          </div>
                         </div>
-                        <div class="feature-badge">
-                          <i class="bi bi-lightning-charge"></i>
-                          <span>Instant Transfers</span>
+                      </div>
+                      <div class="kwikpass-phone">
+                        <div class="phone-screen">
+                          <div class="phone-header">
+                            <div class="phone-status-bar"></div>
+                            <div class="phone-app-title">Kwik Pass</div>
+                          </div>
+                          <div class="phone-content">
+                            <div class="kwikpass-notification">
+                              <div class="notification-icon">
+                                <i class="bi bi-p-circle-fill"></i>
+                              </div>
+                              <div class="notification-content">
+                                <div class="notification-title">Parking Payment</div>
+                                <div class="notification-details">Marina Mall - KWD 2.500</div>
+                              </div>
+                            </div>
+                            <div class="kwikpass-approve-btn">
+                              <i class="bi bi-check-circle"></i>
+                              <span>Approve Payment</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="kwikpass-features">
+                      <div class="kwikpass-feature">
+                        <i class="bi bi-p-circle"></i>
+                        <span>Parking</span>
+                      </div>
+                      <div class="kwikpass-feature">
+                        <i class="bi bi-signpost-split"></i>
+                        <span>Toll Roads</span>
+                      </div>
+                      <div class="kwikpass-feature">
+                        <i class="bi bi-fuel-pump"></i>
+                        <span>Gas Stations</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 3 - Security & Trust -->
+          <div class="hero-slide">
+            <div class="row align-items-center min-vh-100 py-6">
+              <div class="col-12 col-lg-5 text-center text-lg-start">
+                <span class="badge rounded-pill bg-teal-subtle text-teal fw-semibold px-3 py-2">Bank-Grade Security</span>
+                <h1 class="display-5 fw-bold mt-3 mb-3">Your Security, Our Priority</h1>
+                <p class="lead text-body-secondary mb-4">Kwik Pay employs end-to-end encryption, biometric authentication, and complies with international security standards.</p>
+                <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
+                  <a href="#security" class="btn btn-primary btn-lg px-4">
+                    <i class="bi bi-shield-check me-2"></i>Security Features
+                  </a>
+                  <a href="#about" class="btn btn-outline-primary btn-lg px-4">
+                    Our Certifications
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-7">
+                <div class="hero-gallery">
+                  <div class="security-hero-showcase">
+                    <div class="security-shield">
+                      <i class="bi bi-shield-lock"></i>
+                      <div class="security-pulse"></div>
+                    </div>
+                    <div class="security-features">
+                      <div class="security-feature">
+                        <div class="security-feature-icon">
+                          <i class="bi bi-fingerprint"></i>
+                        </div>
+                        <div class="security-feature-text">
+                          <h5>Biometric Authentication</h5>
+                          <p>Secure access with fingerprint & face ID</p>
+                        </div>
+                      </div>
+                      <div class="security-feature">
+                        <div class="security-feature-icon">
+                          <i class="bi bi-lock"></i>
+                        </div>
+                        <div class="security-feature-text">
+                          <h5>End-to-End Encryption</h5>
+                          <p>256-bit encryption for all transactions</p>
+                        </div>
+                      </div>
+                      <div class="security-feature">
+                        <div class="security-feature-icon">
+                          <i class="bi bi-building-lock"></i>
+                        </div>
+                        <div class="security-feature-text">
+                          <h5>Bank-Level Compliance</h5>
+                          <p>Central Bank of Kuwait approved</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                
-                <!-- Feature Grid -->
-                <div class="hero-feature-grid" id="hero-feature-grid">
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="bi bi-phone-fill"></i>
-                    </div>
-                    <div class="feature-content">
-                      <h5>Mobile Payments</h5>
-                      <p>Send money instantly with just a phone number</p>
-                    </div>
-                  </div>
-                  
-                  <div class="feature-card">
-                    <div class="feature-icon">
-                      <i class="bi bi-qr-code-scan"></i>
-                    </div>
-                    <div class="feature-content">
-                      <h5>QR Payments</h5>
-                      <p>Scan and pay quickly at any merchant</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Brand Element -->
-              <div class="hero-brand-element">
-                <div class="brand-logo-container">
-                  <img class="brand-logo" src="assets/Only_logo.svg" alt="Kwikpay logo" width="80" height="80"/>
-                  <div class="brand-glow"></div>
-                </div>
               </div>
             </div>
+          </div>
+          
+          <!-- Hero Navigation -->
+          <div class="hero-navigation">
+            <button class="hero-nav-arrow prev" id="heroNavPrev">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <div class="hero-nav-dots">
+              <button class="hero-nav-dot active" data-slide="0"></button>
+              <button class="hero-nav-dot" data-slide="1"></button>
+              <button class="hero-nav-dot" data-slide="2"></button>
+            </div>
+            <button class="hero-nav-arrow next" id="heroNavNext">
+              <i class="bi bi-chevron-right"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -1658,6 +1810,7 @@
     <!-- Custom JS -->
     <script src="js/script.js"></script>
     <script src="js/threejs-mobile.js"></script>
+    <script src="js/hero-slider.js"></script>
     <script>
       // Initialize AOS animations
       document.addEventListener('DOMContentLoaded', function() {
