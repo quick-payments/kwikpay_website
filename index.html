@@ -40,6 +40,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kwikpass">Kwik Pass</a></li>
             <li class="nav-item"><a class="nav-link" href="#services-section">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
@@ -130,60 +132,117 @@
 
 
 
-    <!-- Kwik Pass (Simplified) -->
-    <section id="pay-by-car" class="py-6">
-      <div class="lottie-container" id="lottie-scene"></div>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <h2 class="h1 fw-bold mb-3">Kwik Pass</h2>
-            <p class="lead text-body-secondary mb-4">Experience seamless parking with Kwik Pay's smart tag technology. No more fumbling for cash or cards—just drive through and pay automatically.</p>
-            <div class="d-flex gap-3 flex-wrap">
-              <a href="pay_by_car.html" class="btn btn-primary btn-lg px-4">
-                <i class="bi bi-car-front me-2"></i>Learn More
-              </a>
-              <a href="#download" class="btn btn-outline-primary btn-lg px-4">
-                <i class="bi bi-phone me-2"></i>Get the app
-              </a>
+    <!-- Kwik Pass - Premium Feature -->
+    <section id="kwikpass" class="py-6 kwikpass-section">
+      <div class="kwikpass-bg-pattern"></div>
+      <div class="container position-relative">
+        <!-- Premium Feature Badge -->
+        <div class="premium-feature-badge">
+          <span>Premium Feature</span>
+        </div>
+        
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold px-3 py-2">Revolutionary Technology</span>
+            <h2 class="h1 fw-bold mt-3 mb-3">Introducing Kwik Pass</h2>
+            <p class="lead mb-0">The future of contactless vehicle payments has arrived in Kuwait.</p>
+          </div>
+        </div>
+        
+        <!-- Main Content -->
+        <!-- How It Works -->
+        <div class="row mb-5">
+          <div class="col-12 text-center mb-4">
+            <h3 class="h2">How Kwik Pass Works</h3>
+          </div>
+        </div>
+        
+        <div class="kwikpass-process">
+          <div class="process-line"></div>
+          
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <div class="step-icon">
+                <i class="bi bi-tag-fill"></i>
+              </div>
+              <h4>Get Your Smart Tag</h4>
+              <p>Order your Kwik Pass tag through the app and attach it to your windshield.</p>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="row g-3">
-              <div class="col-6">
-                <div class="pbc-step-card text-center">
-                  <div class="pbc-step-icon mx-auto mb-3">
-                    <i class="bi bi-tag-fill"></i>
-                  </div>
-                  <h3 class="h6 mb-2">Get Tag</h3>
-                  <p class="text-body-secondary small mb-0">Attach Kwikpass tag to windshield</p>
-                </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <div class="step-icon">
+                <i class="bi bi-wifi"></i>
               </div>
-              <div class="col-6">
-                <div class="pbc-step-card text-center">
-                  <div class="pbc-step-icon mx-auto mb-3">
-                    <i class="bi bi-wifi"></i>
-                  </div>
-                  <h3 class="h6 mb-2">Auto Detection</h3>
-                  <p class="text-body-secondary small mb-0">Gate detects your car automatically</p>
-                </div>
+              <h4>Approach Payment Point</h4>
+              <p>As you approach a compatible payment point, your tag is automatically detected.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <div class="step-icon">
+                <i class="bi bi-phone"></i>
               </div>
-              <div class="col-6">
-                <div class="pbc-step-card text-center">
-                  <div class="pbc-step-icon mx-auto mb-3">
-                    <i class="bi bi-phone"></i>
-                  </div>
-                  <h3 class="h6 mb-2">Approve Payment</h3>
-                  <p class="text-body-secondary small mb-0">Tap to approve on your phone</p>
-                </div>
+              <h4>Receive Notification</h4>
+              <p>A payment request notification appears on your phone with transaction details.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <div class="step-icon">
+                <i class="bi bi-check-circle-fill"></i>
               </div>
-              <div class="col-6">
-                <div class="pbc-step-card text-center">
-                  <div class="pbc-step-icon mx-auto mb-3">
-                    <i class="bi bi-check-circle-fill"></i>
-                  </div>
-                  <h3 class="h6 mb-2">Drive Through</h3>
-                  <p class="text-body-secondary small mb-0">Gate opens, you're on your way</p>
+              <h4>Approve & Go</h4>
+              <p>Tap to approve the payment, and the gate opens automatically. You're all set!</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Compatible Locations -->
+        <div class="row mt-5">
+          <div class="col-12 text-center mb-4">
+            <h3 class="h2">Where You Can Use Kwik Pass</h3>
+          </div>
+          
+          <div class="col-lg-10 mx-auto">
+            <div class="kwikpass-locations">
+              <div class="location-item">
+                <div class="location-icon">
+                  <i class="bi bi-p-circle-fill"></i>
                 </div>
+                <h5>Parking Lots</h5>
+                <p>Major malls and commercial centers across Kuwait</p>
+              </div>
+              
+              <div class="location-item">
+                <div class="location-icon">
+                  <i class="bi bi-signpost-split-fill"></i>
+                </div>
+                <h5>Toll Roads</h5>
+                <p>All major highways with electronic toll collection</p>
+              </div>
+              
+              <div class="location-item">
+                <div class="location-icon">
+                  <i class="bi bi-fuel-pump-fill"></i>
+                </div>
+                <h5>Gas Stations</h5>
+                <p>Selected gas stations throughout Kuwait City</p>
+              </div>
+              
+              <div class="location-item">
+                <div class="location-icon">
+                  <i class="bi bi-cup-hot-fill"></i>
+                </div>
+                <h5>Drive-Throughs</h5>
+                <p>Popular restaurant and coffee shop chains</p>
               </div>
             </div>
           </div>
@@ -478,239 +537,407 @@
         </div>
       </div>
     </section>
-    
-    <!-- Features -->
-    <section id="features" class="py-6 bg-section">
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-6 bg-section">
       <div class="container">
         <div class="row mb-5">
-          <div class="col-lg-8">
-            <h2 class="h1 fw-bold mb-3">Features</h2>
-            <p class="text-body-secondary mb-0">Explore our comprehensive suite of payment solutions designed for customers, merchants, and drivers.</p>
+          <div class="col-lg-8 mx-auto text-center">
+            <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold px-3 py-2">What Our Users Say</span>
+            <h2 class="h1 fw-bold mt-3 mb-3">Trusted by Thousands Across Kuwait</h2>
+            <p class="text-body-secondary mb-0">See how Kwik Pay is transforming everyday transactions for our users.</p>
           </div>
         </div>
         
-        <!-- Tabs for Consumer/Merchant/Kwik Pass -->
-        <ul class="nav nav-pills mb-4 justify-content-center" id="servicesTab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active px-4 py-2" id="consumer-tab" data-bs-toggle="pill" data-bs-target="#consumer" type="button" role="tab" aria-controls="consumer" aria-selected="true">
-              <i class="bi bi-person me-2"></i>For Consumers
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link px-4 py-2" id="merchant-tab" data-bs-toggle="pill" data-bs-target="#merchant" type="button" role="tab" aria-controls="merchant" aria-selected="false">
-              <i class="bi bi-shop me-2"></i>For Merchants
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link px-4 py-2" id="corporate-tab" data-bs-toggle="pill" data-bs-target="#corporate" type="button" role="tab" aria-controls="corporate" aria-selected="false">
-              <i class="bi bi-people-fill me-2"></i>For Corporates
-            </button>
-          </li>
-        </ul>
-
-        <div class="tab-content" id="servicesTabContent">
-          <!-- Consumer Services -->
-          <div class="tab-pane fade show active" id="consumer" role="tabpanel" aria-labelledby="consumer-tab">
-            <div class="row g-4">
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-person-plus-fill"></i>
-                  </div>
-                  <h3 class="h5">Person to Person Transfers</h3>
-                  <p class="mb-0 text-body-secondary">Send money instantly to friends and family with just their phone number.</p>
+        <div class="testimonial-slider-container">
+          <div class="testimonial-slider">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-qr-code"></i>
+                <p class="testimonial-text">"Kwik Pay has completely changed how I handle payments. The QR code feature is incredibly convenient, and I love how fast transactions are processed."</p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">
+                    <span class="avatar-placeholder">AM</span>
                   </div>
-                  <h3 class="h5">QR Code Payments</h3>
-                  <p class="mb-0 text-body-secondary">Scan and pay quickly at any merchant displaying Kwik Pay QR codes.</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-phone-fill"></i>
+                  <div class="testimonial-info">
+                    <div class="testimonial-name">Ahmed Mahmoud</div>
+                    <div class="testimonial-title">Regular User</div>
                   </div>
-                  <h3 class="h5">Pay by Mobile Number</h3>
-                  <p class="mb-0 text-body-secondary">Make secure payments using just the recipient's phone number.</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-arrow-repeat"></i>
-                  </div>
-                  <h3 class="h5">Quick Recharge</h3>
-                  <p class="mb-0 text-body-secondary">Top up mobile, internet, and utility services in seconds.</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-calendar-check"></i>
-                  </div>
-                  <h3 class="h5">Subscription Management</h3>
-                  <p class="mb-0 text-body-secondary">Track and manage all your recurring payments in one place.</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-people-fill"></i>
-                  </div>
-                  <h3 class="h5">Split Bills Easily</h3>
-                  <p class="mb-0 text-body-secondary">Divide expenses with friends and track who's paid their share.</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-car-front-fill"></i>
-                  </div>
-                  <h3 class="h5">Kwik Pass</h3>
-                  <p class="mb-0 text-body-secondary">Pay for parking with your Kwik Pay account.</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-arrow-left-right"></i>
-                  </div>
-                  <h3 class="h5">Request To Pay</h3>
-                  <p class="mb-0 text-body-secondary">Send payment requests to customers for easier collection.</p>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Merchant Services -->
-          <div class="tab-pane fade" id="merchant" role="tabpanel" aria-labelledby="merchant-tab">
-            <div class="row g-4">
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-shop"></i>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-text">"As a business owner, Kwik Pay has streamlined our payment process. The dashboard gives me all the insights I need, and customers love the simplicity."</p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">
+                    <span class="avatar-placeholder">LK</span>
                   </div>
-                  <h3 class="h5">In-Store Payments</h3>
-                  <p class="mb-0 text-body-secondary">Accept payments in your physical store with QR codes or payment links.</p>
+                  <div class="testimonial-info">
+                    <div class="testimonial-name">Laila Khalid</div>
+                    <div class="testimonial-title">Shop Owner</div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-globe"></i>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <p class="testimonial-text">"The Kwik Pass feature is a game-changer for parking payments. I no longer have to worry about carrying cash or finding a payment machine. It's truly seamless!"</p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">
+                    <span class="avatar-placeholder">FH</span>
                   </div>
-                  <h3 class="h5">Online Payments</h3>
-                  <p class="mb-0 text-body-secondary">Integrate Kwik Pay into your website or app for seamless checkout.</p>
+                  <div class="testimonial-info">
+                    <div class="testimonial-name">Fahad Hassan</div>
+                    <div class="testimonial-title">Daily Commuter</div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-phone-vibrate"></i>
+            </div>
+            
+            <!-- Testimonial 4 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-text">"The bill payment feature is so intuitive. I've set up all my recurring payments and never have to worry about missing a due date. Excellent service!"</p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">
+                    <span class="avatar-placeholder">NA</span>
                   </div>
-                  <h3 class="h5">Contactless Transactions</h3>
-                  <p class="mb-0 text-body-secondary">Enable touch-free payments for safer, faster transactions.</p>
+                  <div class="testimonial-info">
+                    <div class="testimonial-name">Noor Al-Ahmad</div>
+                    <div class="testimonial-title">Premium Member</div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-receipt"></i>
-                  </div>
-                  <h3 class="h5">Digital Invoicing</h3>
-                  <p class="mb-0 text-body-secondary">Create and send professional invoices with instant payment links.</p>
+            </div>
+            
+            <!-- Testimonial 5 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-cash-stack"></i>
+                <p class="testimonial-text">"Customer service is top-notch. Had an issue with a transaction and it was resolved within minutes. The security features give me peace of mind."</p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">
+                    <span class="avatar-placeholder">SQ</span>
                   </div>
-                  <h3 class="h5">Request to Pay</h3>
-                  <p class="mb-0 text-body-secondary">Send payment requests to customers for easier collection.</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-arrow-left-right"></i>
+                  <div class="testimonial-info">
+                    <div class="testimonial-name">Sara Qasim</div>
+                    <div class="testimonial-title">Loyal Customer</div>
                   </div>
-                  <h3 class="h5">Bulk Payments</h3>
-                  <p class="mb-0 text-body-secondary">Process multiple payments at once for efficient operations.</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-car-front-fill"></i>
-                  </div>
-                  <h3 class="h5">Kwik Pass</h3>
-                  <p class="mb-0 text-body-secondary">Pay for parking with your Kwik Pay account.</p>
                 </div>
               </div>
             </div>
           </div>
           
-          <!-- corporate Services -->
-          <div class="tab-pane fade" id="corporate" role="tabpanel" aria-labelledby="corporate-tab">
-            <div class="row g-4">
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-people-fill"></i>
-                  </div>
-                  <h3 class="h5">Salary Transfer</h3>
-                  <p class="mb-0 text-body-secondary">Efficient and secure salary transfer services for businesses and employees.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-6 bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold px-3 py-2">Get in Touch</span>
+            <h2 class="h1 fw-bold mt-3 mb-3">Contact Us</h2>
+            <p class="text-body-secondary mb-0">We're here to help with any questions or concerns you may have.</p>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+          <!-- For Sales/Inquiries -->
+          <div class="col-md-4">
+            <div class="contact-card h-100">
+              <div class="contact-icon">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <h3 class="h4 mb-3">For Sales/Inquiries</h3>
+              <ul class="contact-info-list">
+                <li>
+                  <i class="bi bi-telephone"></i>
+                  <span>+965 2200 1234</span>
+                </li>
+                <li>
+                  <i class="bi bi-envelope"></i>
+                  <span>sales@kwikpay.com</span>
+                </li>
+                <li>
+                  <i class="bi bi-clock"></i>
+                  <span>Sun-Thu: 8:00 AM - 4:00 PM</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- For Support -->
+          <div class="col-md-4">
+            <div class="contact-card h-100">
+              <div class="contact-icon">
+                <i class="bi bi-headset"></i>
+              </div>
+              <h3 class="h4 mb-3">For Support</h3>
+              <ul class="contact-info-list">
+                <li>
+                  <i class="bi bi-telephone"></i>
+                  <span>+965 2200 5678</span>
+                </li>
+                <li>
+                  <i class="bi bi-envelope"></i>
+                  <span>support@kwikpay.com</span>
+                </li>
+                <li>
+                  <i class="bi bi-clock"></i>
+                  <span>24/7 Customer Support</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- For Consumer IT Support -->
+          <div class="col-md-4">
+            <div class="contact-card h-100">
+              <div class="contact-icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h3 class="h4 mb-3">Consumer IT Support</h3>
+              <ul class="contact-info-list">
+                <li>
+                  <i class="bi bi-telephone"></i>
+                  <span>+965 2200 9012</span>
+                </li>
+                <li>
+                  <i class="bi bi-envelope"></i>
+                  <span>techsupport@kwikpay.com</span>
+                </li>
+                <li>
+                  <i class="bi bi-clock"></i>
+                  <span>Sun-Thu: 8:00 AM - 10:00 PM</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Modern Contact Buttons -->
+        <div class="row g-4 mb-5">
+          <div class="col-lg-6">
+            <div class="contact-action-card">
+              <div class="contact-action-content">
+                <div class="contact-action-icon">
+                  <i class="bi bi-chat-dots"></i>
+                </div>
+                <div class="contact-action-text">
+                  <h3 class="h4">Send us a Message</h3>
+                  <p class="mb-0">Have a question or inquiry? We'd love to hear from you.</p>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-car-front-fill"></i>
-                  </div>
-                  <h3 class="h5">Fleet Management</h3>
-                  <p class="mb-0 text-body-secondary">Comprehensive fleet management and payment solutions for businesses.</p>
+              <button type="button" class="btn btn-primary contact-action-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+                <span>Get in Touch</span>
+                <i class="bi bi-arrow-right-circle"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="contact-action-card complaint-card">
+              <div class="contact-action-content">
+                <div class="contact-action-icon">
+                  <i class="bi bi-shield-exclamation"></i>
+                </div>
+                <div class="contact-action-text">
+                  <h3 class="h4">Submit a Complaint</h3>
+                  <p class="mb-0">Experiencing an issue? Let us know and we'll resolve it quickly.</p>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-building"></i>
+              <button type="button" class="btn btn-primary contact-action-btn" data-bs-toggle="modal" data-bs-target="#complaintModal">
+                <span>File Complaint</span>
+                <i class="bi bi-arrow-right-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="contactModalLabel">Send us a Message</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-4">
+                <div class="contact-form-wrapper">
+                  <div class="contact-form-intro mb-4">
+                    <div class="contact-form-icon">
+                      <i class="bi bi-chat-dots"></i>
+                    </div>
+                    <p>We're here to help with any questions you might have. Fill out the form below and we'll get back to you as soon as possible.</p>
                   </div>
-                  <h3 class="h5">Business to Business</h3>
-                  <p class="mb-0 text-body-secondary">Comprehensive B2B payment solutions for corporate transactions.</p>
+                  
+                  <form id="contactForm" class="contact-form">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                      <label for="name">Full Name</label>
+                    </div>
+                    
+                    <div class="row g-3 mb-3">
+                      <div class="col-md-6">
+                        <div class="form-floating">
+                          <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                          <label for="email">Email Address</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-floating">
+                          <input type="tel" class="form-control" id="phone" placeholder="Your phone">
+                          <label for="phone">Phone Number</label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                      <select class="form-select" id="subject" required>
+                        <option value="" selected disabled>Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="billing">Billing Question</option>
+                        <option value="partnership">Partnership Opportunity</option>
+                      </select>
+                    </div>
+                    
+                    <div class="form-floating mb-4">
+                      <textarea class="form-control" id="message" style="height: 120px" placeholder="Your message" required></textarea>
+                      <label for="message">Message</label>
+                    </div>
+                    
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="bi bi-send me-2"></i>Send Message
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-receipt"></i>
-                  </div>
-                  <h3 class="h5">Digital Invoicing</h3>
-                  <p class="mb-0 text-body-secondary">Create and send professional invoices with instant payment links.</p>
-                </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Complaint Modal -->
+        <div class="modal fade" id="complaintModal" tabindex="-1" aria-labelledby="complaintModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="complaintModalLabel">Submit a Complaint</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-arrow-left-right"></i>
+              <div class="modal-body p-4">
+                <div class="contact-form-wrapper">
+                  <div class="contact-form-intro mb-4">
+                    <div class="contact-form-icon complaint-icon">
+                      <i class="bi bi-shield-exclamation"></i>
+                    </div>
+                    <p>We take all complaints seriously and are committed to resolving your issue as quickly as possible. Please provide the details below.</p>
                   </div>
-                  <h3 class="h5">Bulk Payments</h3>
-                  <p class="mb-0 text-body-secondary">Process multiple payments at once for efficient operations.</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100 p-4">
-                  <div class="icon-wrap text-primary mb-3">
-                    <i class="bi bi-car-front-fill"></i>
-                  </div>
-                  <h3 class="h5">Kwik Pass</h3>
-                  <p class="mb-0 text-body-secondary">Pay for parking with your Kwik Pay account.</p>
+                  
+                  <form id="complaintForm" class="contact-form">
+                    <div class="row g-3 mb-3">
+                      <div class="col-md-6">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="comp-name" placeholder="Your name" required>
+                          <label for="comp-name">Full Name</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-floating">
+                          <input type="email" class="form-control" id="comp-email" placeholder="Your email" required>
+                          <label for="comp-email">Email Address</label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row g-3 mb-3">
+                      <div class="col-md-6">
+                        <div class="form-floating">
+                          <input type="tel" class="form-control" id="comp-phone" placeholder="Your phone" required>
+                          <label for="comp-phone">Phone Number</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-floating">
+                          <select class="form-select" id="comp-type" required>
+                            <option value="" selected disabled>Select complaint type</option>
+                            <option value="transaction">Transaction Issue</option>
+                            <option value="account">Account Problem</option>
+                            <option value="app">App Functionality</option>
+                            <option value="service">Customer Service</option>
+                            <option value="other">Other</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="comp-ref" placeholder="Transaction or reference number">
+                      <label for="comp-ref">Reference Number (if applicable)</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                      <textarea class="form-control" id="comp-details" style="height: 120px" placeholder="Please describe your issue in detail" required></textarea>
+                      <label for="comp-details">Complaint Details</label>
+                    </div>
+                    
+                    <div class="form-check form-switch mb-4">
+                      <input class="form-check-input" type="checkbox" id="comp-terms" required>
+                      <label class="form-check-label" for="comp-terms">
+                        I confirm that the information provided is accurate and complete
+                      </label>
+                    </div>
+                    
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="bi bi-file-earmark-text me-2"></i>Submit Complaint
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -719,7 +946,208 @@
       </div>
     </section>
 
+    <!-- About Us Section -->
+    <section id="about" class="py-6 bg-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold px-3 py-2">Our Story</span>
+            <h2 class="h1 fw-bold mt-3 mb-3">About Kwik Pay</h2>
+            <p class="text-body-secondary mb-0">Pioneering the future of digital payments in Kuwait.</p>
+          </div>
+        </div>
+        
+        <!-- Vision & Mission -->
+        <div class="row g-4 mb-5">
+          <div class="col-md-6">
+            <div class="about-card vision-card">
+              <div class="about-card-icon">
+                <i class="bi bi-eye"></i>
+              </div>
+              <h3 class="h4">Our Vision</h3>
+              <p>To lead Kuwait's digital transformation by creating a seamless, cashless ecosystem where payments are instant, secure, and accessible to all segments of society.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="about-card mission-card">
+              <div class="about-card-icon">
+                <i class="bi bi-flag"></i>
+              </div>
+              <h3 class="h4">Our Mission</h3>
+              <p>To revolutionize everyday transactions through innovative payment solutions that empower consumers, merchants, and corporate clients while maintaining world-class security standards and exceptional user experience.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Company Story -->
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h3 class="h2 mb-4">Our Journey</h3>
+            <p class="lead mb-4">Quick Payment International Co. is Kuwait's premier financial technology company specializing in comprehensive digital payment solutions. Founded by Mr. Mohammed Alaleem, former Minister of Oil, Electricity & Water in Kuwait, our company was established with a vision to transform the payment landscape in the region.</p>
+            <p>Starting with a focus on secure mobile transactions, we've rapidly expanded our service portfolio to include advanced payment technologies that serve diverse market segments. Today, we offer a comprehensive suite of solutions including:</p>
+            <ul class="mt-3 mb-4">
+              <li>Mobile wallet services with instant transfers</li>
+              <li>QR code payment systems for merchants</li>
+              <li>Innovative Soundbox technology for payment confirmations</li>
+              <li>Android-based payment terminals for businesses</li>
+              <li>Secure online payment gateways for e-commerce</li>
+              <li>Revolutionary Kwik Pass for contactless vehicle payments</li>
+            </ul>
+            <p>With certifications from the Central Bank of Kuwait and adherence to international security standards, we continue to pioneer financial technology innovations that make everyday transactions simpler, faster, and more secure for all Kuwaitis.</p>
+          </div>
+        </div>
+        
+        <!-- Certifications and Approvals -->
+        <div class="row mb-5">
+          <div class="col-12 text-center mb-4">
+            <h3 class="h2">Certifications and Approvals</h3>
+          </div>
+        </div>
+        
+        <div class="row g-4 mb-5 justify-content-center">
+          <div class="col-md-4">
+            <div class="certification-card text-center">
+              <div class="certification-image">
+                <img src="assets/central bank of kuwait.png" alt="Central Bank of Kuwait" class="img-fluid mb-3" style="max-height: 100px;">
+              </div>
+              <h4>Central Bank of Kuwait</h4>
+              <p>Company approved by Central Bank of Kuwait</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="certification-card text-center">
+              <div class="certification-image">
+                <img src="assets/pci-dss.webp" alt="PCI DSS Certificate" class="img-fluid mb-3" style="max-height: 100px;">
+              </div>
+              <h4>PCI DSS Certified</h4>
+              <p>Payment Card Industry Data Security Standard</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="certification-card text-center">
+              <div class="certification-image">
+                <img src="assets/ISO-27701.png" alt="ISO 27701 Certificate" class="img-fluid mb-3" style="max-height: 100px;">
+              </div>
+              <h4>ISO 27701 Certified</h4>
+              <p>Privacy Information Management System</p>
+            </div>
+          </div>
+        </div>
 
+        <!-- Core Values -->
+        <div class="row mb-5">
+          <div class="col-12 text-center mb-4">
+            <h3 class="h2">Our Core Values</h3>
+          </div>
+        </div>
+        
+        <div class="row g-4 mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="bi bi-shield-lock"></i>
+              </div>
+              <h4>Security First</h4>
+              <p>We implement end-to-end encryption, biometric authentication, and adhere to international standards like PCI DSS and ISO 27701 to protect every transaction.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="bi bi-lightning-charge"></i>
+              </div>
+              <h4>Innovation</h4>
+              <p>From our Kwik Pass vehicle payment system to our comprehensive digital wallet solutions, we continuously develop technologies that transform everyday transactions.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h4>Inclusivity</h4>
+              <p>We design our solutions to serve all segments of society—consumers, merchants, and corporate clients—making digital payments accessible to everyone in Kuwait.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="bi bi-speedometer2"></i>
+              </div>
+              <h4>Efficiency</h4>
+              <p>Our instant transfers, QR payments, and contactless solutions are designed to save time and simplify processes for all our users across Kuwait.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Leadership Team -->
+        <div class="row mb-5">
+          <div class="col-12 text-center mb-4">
+            <h3 class="h2">Leadership Team</h3>
+            <p class="text-body-secondary mb-4">Meet the visionaries driving Kwik Pay's innovation and growth in Kuwait's fintech landscape.</p>
+          </div>
+        </div>
+        
+        <div class="row g-4 mb-5 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="team-card">
+              <div class="team-image">
+                <img src="assets/team-ceo.jpg" alt="Chairman" class="img-fluid" onerror="this.src='https://via.placeholder.com/300x300'">
+              </div>
+              <div class="team-info">
+                <h4>Mohammed Al Aleem</h4>
+                <p class="team-title">Founder & Chairman</p>
+                <p class="team-bio">Former Minister of Oil, Electricity & Water in Kuwait with extensive experience in leadership and strategic development.</p>
+                <div class="team-social">
+                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="team-card">
+              <div class="team-image">
+                <img src="assets/team-ceo.jpg" alt="CEO" class="img-fluid" onerror="this.src='https://via.placeholder.com/300x300'">
+              </div>
+              <div class="team-info">
+                <h4>Ravindra Joshi</h4>
+                <p class="team-title">Chief Executive Officer</p>
+                <p class="team-bio">Experienced executive with a proven track record in financial technology and digital payment solutions.</p>
+                <div class="team-social">
+                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="team-card">
+              <div class="team-image">
+                <img src="assets/team-ceo.jpg" alt="CTO" class="img-fluid" onerror="this.src='https://via.placeholder.com/300x300'">
+              </div>
+              <div class="team-info">
+                <h4>Sathya Andivel</h4>
+                <p class="team-title">Chief Technology Officer</p>
+                <p class="team-bio">Technology leader with expertise in developing secure, scalable payment platforms and innovative fintech solutions.</p>
+                <div class="team-social">
+                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Security -->
     <section id="security" class="py-6 bg-gradient-navy">
@@ -780,32 +1208,6 @@
               <p>Built for Kuwait with full compliance to local financial regulations.</p>
               <div class="security-badge">
                 <span>Certified</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row mt-5">
-          <div class="col-lg-8 mx-auto">
-            <div class="security-standards">
-              <h4>Our Security Certifications</h4>
-              <div class="security-standards-grid">
-                <div class="security-standard-item">
-                  <i class="bi bi-lock"></i>
-                  <span>PCI DSS</span>
-                </div>
-                <div class="security-standard-item">
-                  <i class="bi bi-shield"></i>
-                  <span>ISO 27701</span>
-                </div>
-                <div class="security-standard-item">
-                  <i class="bi bi-eye-slash"></i>
-                  <span>GDPR</span>
-                </div>
-                <div class="security-standard-item">
-                  <i class="bi bi-patch-check"></i>
-                  <span>SOC 2</span>
-                </div>
               </div>
             </div>
           </div>

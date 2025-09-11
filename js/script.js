@@ -567,6 +567,585 @@ document.addEventListener('DOMContentLoaded', function () {
     // Start auto-advance after a delay
     setTimeout(startAutoAdvance, 2000);
   }
+  
+  // Testimonial Slider
+  initTestimonialSlider();
+  
+  // Hero Image Slider
+  initHeroImageSlider();
+  
+  // Contact and Complaint Forms
+  initContactForms();
+  
+  // About Us Timeline Animation
+  initTimelineAnimation();
+  
+  // Kwik Pass Demo
+  initKwikPassDemo();
 });
+
+// Contact and Complaint Forms Functionality
+function initContactForms() {
+  const contactForm = document.getElementById('contactForm');
+  const complaintForm = document.getElementById('complaintForm');
+  const contactModal = document.getElementById('contactModal');
+  const complaintModal = document.getElementById('complaintModal');
+  
+  // Create feedback container if it doesn't exist
+  let feedbackContainer = document.querySelector('.form-feedback-container');
+  if (!feedbackContainer) {
+    feedbackContainer = document.createElement('div');
+    feedbackContainer.className = 'form-feedback-container';
+    document.body.appendChild(feedbackContainer);
+  }
+  
+  // Add animation to modal forms
+  if (contactModal) {
+    contactModal.addEventListener('shown.bs.modal', function() {
+      animateFormFields(contactForm);
+    });
+  }
+  
+  if (complaintModal) {
+    complaintModal.addEventListener('shown.bs.modal', function() {
+      animateFormFields(complaintForm);
+    });
+  }
+  
+  // Handle contact form submission
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const name = contactForm.querySelector('#name').value;
+      const email = contactForm.querySelector('#email').value;
+      const subject = contactForm.querySelector('#subject').value;
+      const message = contactForm.querySelector('#message').value;
+      
+      // Validate form data
+      if (!name || !email || !subject || !message) {
+        showFormFeedback('Error', 'Please fill in all required fields', 'error');
+        return;
+      }
+      
+      // Simulate form submission
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.innerHTML;
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<div class="spinner-border spinner-border-sm me-2" role="status"><span class="visually-hidden">Loading...</span></div>Sending...';
+      
+      // Simulate API call with timeout
+      setTimeout(() => {
+        // Reset form
+        contactForm.reset();
+        
+        // Close modal
+        const modal = bootstrap.Modal.getInstance(contactModal);
+        if (modal) {
+          modal.hide();
+        }
+        
+        // Show success message
+        showFormFeedback('Success!', 'Your message has been sent successfully! We\'ll get back to you soon.', 'success');
+        
+        // Reset button
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      }, 1500);
+    });
+  }
+  
+  // Handle complaint form submission
+  if (complaintForm) {
+    complaintForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const name = complaintForm.querySelector('#comp-name').value;
+      const email = complaintForm.querySelector('#comp-email').value;
+      const phone = complaintForm.querySelector('#comp-phone').value;
+      const type = complaintForm.querySelector('#comp-type').value;
+      const details = complaintForm.querySelector('#comp-details').value;
+      const terms = complaintForm.querySelector('#comp-terms').checked;
+      
+      // Validate form data
+      if (!name || !email || !phone || !type || !details || !terms) {
+        showFormFeedback('Error', 'Please fill in all required fields and accept the terms', 'error');
+        return;
+      }
+      
+      // Simulate form submission
+      const submitButton = complaintForm.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.innerHTML;
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<div class="spinner-border spinner-border-sm me-2" role="status"><span class="visually-hidden">Loading...</span></div>Submitting...';
+      
+      // Generate reference number
+      const refNumber = 'KP-' + Math.floor(100000 + Math.random() * 900000);
+      
+      // Simulate API call with timeout
+      setTimeout(() => {
+        // Reset form
+        complaintForm.reset();
+        
+        // Close modal
+        const modal = bootstrap.Modal.getInstance(complaintModal);
+        if (modal) {
+          modal.hide();
+        }
+        
+        // Show success message
+        showFormFeedback('Complaint Submitted', `Your complaint has been submitted successfully! Reference #${refNumber}`, 'success');
+        
+        // Reset button
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      }, 1500);
+    });
+  }
+  
+  // Helper function to show feedback toast
+  function showFormFeedback(title, message, type) {
+    // Remove any existing feedback
+    const existingFeedback = document.querySelector('.form-feedback');
+    if (existingFeedback) {
+      existingFeedback.remove();
+    }
+    
+    // Create feedback element
+    const feedback = document.createElement('div');
+    feedback.className = 'form-feedback';
+    feedback.innerHTML = `
+      <div class="form-feedback-icon ${type}">
+        <i class="bi bi-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+      </div>
+      <div class="form-feedback-content">
+        <h5>${title}</h5>
+        <p>${message}</p>
+      </div>
+    `;
+    
+    // Add to container
+    feedbackContainer.appendChild(feedback);
+    
+    // Show feedback with animation
+    setTimeout(() => {
+      feedback.classList.add('show');
+    }, 100);
+    
+    // Auto-dismiss after 5 seconds
+    setTimeout(() => {
+      feedback.classList.remove('show');
+      setTimeout(() => {
+        if (feedback.parentNode) {
+          feedback.parentNode.removeChild(feedback);
+        }
+      }, 500);
+    }, 5000);
+  }
+  
+  // Helper function to animate form fields
+  function animateFormFields(form) {
+    if (!form) return;
+    
+    const formElements = form.querySelectorAll('.form-floating, .form-check, .d-grid');
+    
+    formElements.forEach((element, index) => {
+      // Reset initial state
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(20px)';
+      
+      // Animate with delay based on index
+      setTimeout(() => {
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      }, 100 + (index * 100));
+    });
+  }
+}
+
+// Kwik Pass Professional Demo
+function initKwikPassDemo() {
+  const demoBtn = document.getElementById('kwikpass-demo-btn');
+  const kwikpassTag = document.querySelector('.kwikpass-tag-pro');
+  const kwikpassPhone = document.querySelector('.kwikpass-phone-pro');
+  const approveBtn = document.querySelector('.payment-approve-btn');
+  const declineBtn = document.querySelector('.payment-decline-btn');
+  const rfidSignal = document.querySelector('.rfid-signal i');
+  
+  // Initial state
+  let isAnimating = false;
+  let animationTimeout;
+  
+  // Professional demo sequence
+  function playDemo() {
+    if (isAnimating) return;
+    isAnimating = true;
+    
+    // Reset elements
+    resetElements();
+    
+    // Step 1: Highlight the tag
+    setTimeout(() => {
+      if (kwikpassTag) {
+        kwikpassTag.style.transform = 'rotateY(-5deg) rotateX(2deg) translateY(-10px)';
+        kwikpassTag.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.2)';
+      }
+      
+      // Activate RFID signal
+      if (rfidSignal) {
+        rfidSignal.style.animation = 'pulse 1s infinite';
+        rfidSignal.style.opacity = '1';
+      }
+    }, 500);
+    
+    // Step 2: Highlight the phone
+    setTimeout(() => {
+      if (kwikpassPhone) {
+        kwikpassPhone.style.transform = 'rotate(-3deg) translateY(-10px)';
+        kwikpassPhone.style.boxShadow = '0 35px 70px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.2)';
+      }
+      
+      // Highlight approve button
+      if (approveBtn) {
+        approveBtn.style.transform = 'scale(1.05)';
+        approveBtn.style.boxShadow = '0 8px 20px rgba(9, 128, 255, 0.3)';
+      }
+    }, 1500);
+    
+    // Step 3: Show approval
+    setTimeout(() => {
+      if (approveBtn) {
+        approveBtn.style.backgroundColor = '#10b981';
+        approveBtn.textContent = 'Approved';
+        approveBtn.style.boxShadow = '0 8px 20px rgba(16, 185, 129, 0.3)';
+      }
+    }, 2500);
+    
+    // Reset after animation
+    animationTimeout = setTimeout(() => {
+      resetElements();
+      isAnimating = false;
+    }, 5000);
+  }
+  
+  // Reset elements to initial state
+  function resetElements() {
+    if (kwikpassTag) {
+      kwikpassTag.style.transform = '';
+      kwikpassTag.style.boxShadow = '';
+    }
+    
+    if (kwikpassPhone) {
+      kwikpassPhone.style.transform = '';
+      kwikpassPhone.style.boxShadow = '';
+    }
+    
+    if (approveBtn) {
+      approveBtn.style.transform = '';
+      approveBtn.style.backgroundColor = '';
+      approveBtn.textContent = 'Approve';
+      approveBtn.style.boxShadow = '';
+    }
+    
+    if (rfidSignal) {
+      rfidSignal.style.animation = '';
+      rfidSignal.style.opacity = '';
+    }
+  }
+  
+  // Add hover effects
+  function addHoverEffects() {
+    if (approveBtn) {
+      approveBtn.addEventListener('mouseenter', () => {
+        if (!isAnimating) {
+          approveBtn.style.transform = 'translateY(-2px)';
+          approveBtn.style.boxShadow = '0 8px 20px rgba(9, 128, 255, 0.3)';
+        }
+      });
+      
+      approveBtn.addEventListener('mouseleave', () => {
+        if (!isAnimating) {
+          approveBtn.style.transform = '';
+          approveBtn.style.boxShadow = '';
+        }
+      });
+    }
+    
+    if (declineBtn) {
+      declineBtn.addEventListener('mouseenter', () => {
+        declineBtn.style.transform = 'translateY(-2px)';
+      });
+      
+      declineBtn.addEventListener('mouseleave', () => {
+        declineBtn.style.transform = '';
+      });
+    }
+  }
+  
+  // Auto-play demo when section is in view
+  const kwikpassSection = document.getElementById('kwikpass');
+  if (kwikpassSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !isAnimating) {
+          // Auto-play after a short delay when section is visible
+          setTimeout(() => {
+            if (!isAnimating) {
+              playDemo();
+            }
+          }, 1000);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    observer.observe(kwikpassSection);
+  }
+  
+  // Add click event to demo button
+  if (demoBtn) {
+    demoBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      playDemo();
+    });
+  }
+  
+  // Initialize hover effects
+  addHoverEffects();
+}
+
+// About Us Timeline Animation
+function initTimelineAnimation() {
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  const valueCards = document.querySelectorAll('.value-card');
+  const teamCards = document.querySelectorAll('.team-card');
+  const aboutCards = document.querySelectorAll('.about-card');
+  
+  // Create intersection observer for timeline items
+  const timelineObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        timelineObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  
+  // Create intersection observer for value cards with delay
+  const valueObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, index * 150);
+        valueObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  // Create intersection observer for team cards with delay
+  const teamObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, index * 150);
+        teamObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  // Create intersection observer for about cards
+  const aboutObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        aboutObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  
+  // Initialize timeline items
+  timelineItems.forEach(item => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(30px)';
+    item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    timelineObserver.observe(item);
+  });
+  
+  // Initialize value cards
+  valueCards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    valueObserver.observe(card);
+  });
+  
+  // Initialize team cards
+  teamCards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    teamObserver.observe(card);
+  });
+  
+  // Initialize about cards
+  aboutCards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    aboutObserver.observe(card);
+  });
+}
+
+function initHeroImageSlider() {
+  const sliderContainer = document.querySelector('.hero-slider-container');
+  const slides = document.querySelectorAll('.hero-slide');
+  
+  if (!sliderContainer || slides.length === 0) return;
+  
+  let currentPosition = 0;
+  let slideWidth = slides[0].offsetWidth;
+  
+  // Clone slides for infinite loop effect
+  const firstSlideClone = slides[0].cloneNode(true);
+  const secondSlideClone = slides[1].cloneNode(true);
+  
+  sliderContainer.appendChild(firstSlideClone);
+  sliderContainer.appendChild(secondSlideClone);
+  
+  // Start continuous animation
+  startContinuousSlide();
+  
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    slideWidth = slides[0].offsetWidth;
+  });
+  
+  function startContinuousSlide() {
+    let lastTime = 0;
+    let speed = 2.5; // pixels per millisecond - adjust for desired speed
+    
+    function animate(currentTime) {
+      if (!lastTime) lastTime = currentTime;
+      const deltaTime = currentTime - lastTime;
+      lastTime = currentTime;
+      
+      // Move the slider continuously
+      currentPosition += speed * deltaTime / 1000;
+      
+      // Reset position when all slides have been shown
+      if (currentPosition >= slides.length * slideWidth) {
+        currentPosition = 0;
+        sliderContainer.style.transition = 'none';
+      } else {
+        sliderContainer.style.transition = 'transform 0.1s linear';
+      }
+      
+      // Apply the transform
+      sliderContainer.style.transform = `translateX(${-currentPosition}px)`;
+      
+      // Continue animation
+      requestAnimationFrame(animate);
+    }
+    
+    requestAnimationFrame(animate);
+  }
+}
+
+// Testimonial Slider Functionality
+function initTestimonialSlider() {
+  const slider = document.querySelector('.testimonial-slider');
+  const slides = document.querySelectorAll('.testimonial-slide');
+  
+  if (!slider || slides.length === 0) return;
+  
+  let currentIndex = 0;
+  let slideWidth = slides[0].offsetWidth + 20; // slide width + gap
+  let isAnimating = false;
+  
+  // Clone slides for infinite loop effect
+  const firstSlideClone = slides[0].cloneNode(true);
+  const secondSlideClone = slides[1].cloneNode(true);
+  const lastSlideClone = slides[slides.length - 1].cloneNode(true);
+  const secondLastSlideClone = slides[slides.length - 2].cloneNode(true);
+  
+  slider.appendChild(firstSlideClone);
+  slider.appendChild(secondSlideClone);
+  slider.insertBefore(lastSlideClone, slides[0]);
+  slider.insertBefore(secondLastSlideClone, lastSlideClone);
+  
+  // Set initial position
+  currentIndex = 2; // Start at the first real slide (after the clones)
+  updateSliderPosition();
+  
+  slider.addEventListener('transitionend', handleTransitionEnd);
+  
+  window.addEventListener('resize', () => {
+    slideWidth = slides[0].offsetWidth + 20;
+    updateSliderPosition(false);
+  });
+  
+  // Start continuous animation
+  startContinuousSlide();
+  
+  // Functions
+  function startContinuousSlide() {
+    // Use requestAnimationFrame for smoother animation
+    let lastTime = 0;
+    let speed = 2.5; // pixels per millisecond
+    
+    function animate(currentTime) {
+      if (!lastTime) lastTime = currentTime;
+      const deltaTime = currentTime - lastTime;
+      lastTime = currentTime;
+      
+      // Move the slider continuously
+      currentIndex += speed * deltaTime / slideWidth * 0.01;
+      
+      // If we've moved a whole slide, round to the nearest integer
+      if (currentIndex >= slides.length + 2) {
+        currentIndex = 2;
+        slider.style.transition = 'none';
+      } else {
+        slider.style.transition = 'transform 0.1s linear';
+      }
+      
+      updateSliderPosition();
+      requestAnimationFrame(animate);
+    }
+    
+    requestAnimationFrame(animate);
+  }
+  
+  function updateSliderPosition(withTransition = true) {
+    if (!withTransition) {
+      slider.style.transition = 'none';
+    }
+    slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+  }
+  
+  function handleTransitionEnd() {
+    // Reset to the first real slide when we reach the end
+    if (currentIndex >= slides.length + 2) {
+      currentIndex = 2;
+      slider.style.transition = 'none';
+      updateSliderPosition();
+    }
+    
+    // Reset to the last real slide when we go before the start
+    if (currentIndex <= 1) {
+      currentIndex = slides.length + 1;
+      slider.style.transition = 'none';
+      updateSliderPosition();
+    }
+  }
+}
 
 
