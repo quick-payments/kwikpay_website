@@ -1,0 +1,74 @@
+Terms & Conditions
+This document outlines the Terms and Conditions (“Terms”) governing the use of Kwik Pay’s digital wallet, loyalty programs, and payment services (collectively, the “Services”). By accessing or using the Kwik Pay Application (“App”), website, or services, you agree to comply with these Terms. Continued use constitutes acceptance of any future amendments.
+Definitions
+1. App/Platform: The Kwik Pay software, website, or mobile application.
+2. Bank: Financial institutions partnering with Kwik Pay to facilitate transactions.
+3. Dispute: A disagreement related to transactions, rewards, or Services.
+4. Kwik Pay: The digital payment platform operated by Quick payments, licensed by the Central Bank of Kuwait.
+5. Merchant: Businesses or individuals accepting payments via Kwik Pay.
+6. Payment Instrument: Debit/credit cards, bank accounts, or prepaid wallets linked to Kwik Pay.
+7. Transaction: Any payment, transfer, or redemption of rewards through Kwik Pay.
+8. User: Any individual or entity registered to use Kwik Pay.
+9. Kwik Points: Loyalty points earned through eligible transactions.
+10. FastTrack RFID: Kwik Pay’s automated parking payment system.
+Scope of Services
+Kwik Pay provides:
+1. Digital Wallet: Instant peer-to-peer transfers, merchant payments, and prepaid wallet services.
+2. Loyalty Programs: Earn and redeem Kwik Points for discounts, gift cards, or partner rewards.
+3. Merchant Solutions: QR payments, gift card creation, and loyalty program integration.
+4. FastTrack RFID Parking: Automated parking payments via RFID stickers.
+Eligibility:
+• Users must be residents of Kuwait with valid ID and a registered mobile number.
+• Corporate accounts require commercial registration proof.
+Terms of Use
+1. Registration & Account Security
+• Provide accurate, current information during registration. Misrepresentation may lead to account suspension.
+• Safeguard login credentials (passwords, PINs). Kwik Pay is not liable for unauthorized access due to negligence.
+• Biometric authentication (fingerprint/face ID) is recommended for added security.
+2. Transactions
+• Payment Limits:
+o Unverified accounts: KD 500/day.
+o ID-verified accounts: KD 1,000/day.
+• Liability: Users are solely responsible for transactions initiated by their accounts.
+• RFID FastTrack:
+o RFID stickers (KD 5 one-time fee) must be linked to a funded wallet.
+o Users are liable for unpaid parking fees due to insufficient balance.
+3. Kwik Points & Loyalty Programs
+• Earning Points:
+o 1 Kwik Point = KD 1 spent on eligible transactions.
+o Bonus points for referrals (e.g., 100 points per friend).
+• Redemption:
+o Points expire after 365 days of inactivity.
+o Non-transferable; redeemable only via the App.
+• Royalty Cards (Coming Soon):
+o Tiered benefits (Silver, Gold, Platinum) based on monthly spending.
+4. Merchant Services
+• Gift Cards:
+o Non-refundable unless required by Kuwaiti law.
+o Expiry dates set by merchants (minimum 6 months).
+• QR Payments:
+o Merchants receive settlements within 24 hours.
+User Responsibilities
+1. Verify transaction details (amount, recipient) before confirming.
+2. Report lost/stolen RFID stickers or unauthorized transactions immediately.
+3. Comply with Central Bank of Kuwait regulations and anti-money laundering laws.
+Refund & Cancellation Policy
+1. Refund Eligibility:
+o Failed Transactions: Refunded within 72 hours if due to technical errors.
+o Gift Cards: Non-refundable unless the merchant initiates a refund.
+o Kwik Points: Non-refundable; cannot be converted to cash.
+2. Process: Submit refund requests to support@kwikpay.comkw with transaction details. Refunds processed within 7 business days.
+Dispute Resolution
+1. Negotiation: Attempt amicable resolution within 30 days.
+2. Arbitration: Unresolved disputes referred to Kuwaiti arbitration under local laws.
+Amendments
+Kwik Pay reserves the right to modify Terms, fees, or services. Changes take effect 7 days after notification via App/email. Continued use implies acceptance.
+Governing Law
+These Terms are governed by Kuwaiti law. Disputes fall under the exclusive jurisdiction of Kuwaiti courts.
+Disclaimer
+Kwik Pay is not liable for:
+• Technical errors beyond its control (e.g., bank system failures).
+• Disputes between Users and Merchants.
+• Misuse of Kwik Points or gift cards.
+Contact Us: For queries, email support@kwikpay.com.kw or call +965 2200 0000.
+By using Kwik Pay, you acknowledge reading and agreeing to these Terms.

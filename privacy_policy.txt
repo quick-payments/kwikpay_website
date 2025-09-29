@@ -1,0 +1,67 @@
+Privacy Policy
+This Privacy Policy outlines our policies and procedures on the collection, use, and disclosure of your information when you use the Service. It informs you about your privacy rights and how the law protects you. By using the Service, you agree to the collection and use of information in accordance with this Privacy Policy.
+Interpretation and Definitions
+Interpretation
+Words with initial capital letters have specific meanings defined under the following conditions. These definitions apply regardless of whether they appear in singular or plural form.
+Definitions
+For the purposes of this Privacy Policy:
+• Account: A unique account created for you to access our Service or parts of our Service.
+• Affiliate: An entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest, or other securities entitled to vote for the election of directors or other managing authorities.
+• Application: Refers to Kwik Pay, the software program provided by the Company.
+• Company (referred to as either "the Company," "we," "us," or "our" in this Agreement): Refers to Kwik Pay.
+• Country: Refers to Kuwait.
+• Device: Any device that can access the Service, such as a computer, cell phone, or digital tablet.
+• Data Controller: The entity that determines the purposes and means of processing personal data.
+• Data Processor: The entity that processes data on behalf of the Data Controller.
+• Personal Data: Any information that relates to an identified or identifiable individual.
+• Service: Refers to the Application.
+• Service Provider: Any natural or legal person who processes data on behalf of the Company.
+• Usage Data: Data collected automatically, either generated using the Service or from the Service infrastructure itself (for example, the duration of a page visit).
+• You: The individual accessing or using the Service, or the company or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+Collecting and Using Your Personal Data
+Types of Data Collected
+Personal Data
+While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. This may include, but is not limited to:
+• Identification: National ID
+• Personal Data: Name, gender, date of birth, nationality, etc.
+• Contact Details: Mobile number, email address, address, etc.
+• Financial Information: Bank account details, payment card details, and transaction history.
+Usage Data
+Usage Data is collected automatically when using the Service. This may include information such as:
+• Your device's Internet Protocol address (IP address),
+• Browser type and version,
+• The pages of our Service that you visit,
+• Time and date of your visit,
+• The time spent on those pages,
+• Unique device identifiers and other diagnostic data.
+When accessing the Service through a mobile device, we may collect certain information automatically, including:
+• Type of mobile device used,
+• Mobile device’s unique ID,
+• Mobile operating system,
+• Type of mobile Internet browser used.
+Information Collected While Using the Application
+With your prior permission, we may collect:
+• Information from your device's phone book (contacts list).
+This information helps us provide features of our Service and improve customization. The information may be uploaded to our servers and/or stored on your device. You can enable or disable access to this information at any time through your device settings.
+Use of Your Personal Data
+The Company may use Personal Data for the following purposes:
+• To provide and maintain our Service, including monitoring its usage.
+• To manage your Account, giving you access to functionalities available to registered users.
+• For contract performance, including development, compliance, and execution of purchase agreements.
+• To contact you via email, telephone calls, SMS, or mobile push notifications regarding updates, features, or security concerns.
+• To provide you with news and offers about services like those you have already purchased or enquired about unless you opt out.
+• To manage your requests, ensuring effective customer support.
+• To prevent fraud, helping monitor transactions against theft.
+• For business transfers, in the case of mergers, sales, or restructurings where Personal Data may be transferred.
+• For other purposes, including data analysis, service improvement, and marketing effectiveness evaluation.
+Retention of Your Personal Data
+We will retain your Personal Data only as long as necessary for the purposes set out in this Privacy Policy. We will keep and use your data to comply with legal obligations, resolve disputes, and enforce policies.
+Transfer of Your Personal Data
+Your information, including Personal Data, may be processed outside your jurisdiction. By submitting your information, you agree to this transfer. We ensure that your data is treated securely and in accordance with this Privacy Policy.
+Security of Your Personal Data
+We prioritize the security of your Personal Data, but no method of transmission over the Internet or electronic storage is 100% secure. While we strive for the highest level of security, we cannot guarantee absolute protection.
+Children's Privacy
+Our Service does not address anyone under the age of 13. If we discover that we have collected Personal Data from anyone under 13 without parental consent, we will take steps to remove that information.
+Changes to This Privacy Policy
+We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and informing you via email or a notice on our Service before the changes become effective.
+For any concerns regarding this Privacy Policy, contact us at support@kwikpay.com.kw.
